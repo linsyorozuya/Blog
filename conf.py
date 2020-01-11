@@ -22,7 +22,7 @@ enable_jsdelivr = {
 site_name = "Lin's よろづ屋"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2020-01-11T12:00+08:00"
-author = "H。H"
+author = "linsyorozuya"
 email = "linsyorozuya@yahoo.com"
 author_homepage = "https://www.linsyorozuya.com"
 description = "吾性自足，不假外求"
@@ -85,6 +85,7 @@ footer_addon = ''
 
 body_addon = ''
 
+# 评论设置
 valine = {
     "enable": True,
     "el": '#vcomments',
