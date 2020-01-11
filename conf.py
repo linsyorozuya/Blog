@@ -21,7 +21,7 @@ enable_jsdelivr = {
 # 站点设置
 site_name = "Lin's よろづ屋"
 site_logo = "${static_prefix}logo.png"
-site_build_date = "2019-12-18T16:51+08:00"
+site_build_date = "2020-01-11T12:00+08:00"
 author = "H。H"
 email = "linsyorozuya@yahoo.com"
 author_homepage = "https://www.linsyorozuya.com"
