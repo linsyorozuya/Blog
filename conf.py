@@ -84,3 +84,12 @@ head_addon = r'''
 footer_addon = ''
 
 body_addon = ''
+
+valine = {
+    "enable": True,
+    "el": '#vcomments',
+    "appId": "eMmVkL0FDqrmunWuz9m5sBGn-gzGzoHsz",
+    "appKey": "RsDa5XAzjj8cWQLigV7YezRM",
+    "visitor": True,
+    "recordIP": True
+}
