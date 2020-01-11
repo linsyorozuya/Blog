@@ -9,7 +9,7 @@ build_dir = "../dist/"
 index_page_size = 10
 archives_page_size = 20
 category_by_folder = True
-fetch_remote_imgs = True
+# fetch_remote_imgs = True
 
 template = {
     "name": "Galileo",
