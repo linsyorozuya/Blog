@@ -8,11 +8,15 @@ source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
 archives_page_size = 20
+category_by_folder = True
+fetch_remote_imgs = True
+
 template = {
     "name": "Galileo",
     "type": "local",
     "path": "../Galileo"
 }
+
 enable_jsdelivr = {
     "enabled": True,
     "repo": "linsyorozuya/Blog@gh-pages"
