@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/8ece5abdfdcbd40a9527820e80eff4c3.json"
+            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/d953e5b406d6609b1aa39f8ab32619b4.json"
         }
     </script>
     
@@ -87,13 +87,13 @@
                 <blockquote><p>在看 <a href="http://kittenyang.com/pagecontrol/"><code>kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果</code></a> 和 <a href="http://www.cnblogs.com/ludashi/p/4994520.html"><code>视错觉：从一个看似简单的自定义控件说起</code></a> 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。</p>
 </blockquote>
 <p>锤子的效果：</p>
-<p><figure style="flex: 75.38461538461539" ><img width="294" height="195" src="https://linsyorozuya.com/content/images/2016/01/2014-11-10-22_03_58.gif" /></figure></p>
+<p><figure style="flex: 75.38461538461539" ><img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/46fadfb2131bcb2ccfada3fb1a17a0ae.gif" /></figure></p>
 <p>首先 kittenyang 实现的，当亮点划过两个暗点的中间是还是显示的</p>
-<p><figure style="flex: 80.05319148936171" ><img width="301" height="188" src="https://linsyorozuya.com/content/images/2016/01/2014-11-10-22_43_44.gif" /></figure></p>
+<p><figure style="flex: 80.05319148936171" ><img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/c294b9b0c41ec5aaa75d092fbe7b8b6a.gif" /></figure></p>
 <p>再看视错觉文章里的效果：</p>
-<p><figure style="flex: 28.181818181818183" ><img width="279" height="495" src="https://linsyorozuya.com/content/images/2016/01/545446-20151125131300812-815351965.gif" /></figure></p>
+<p><figure style="flex: 28.181818181818183" ><img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/e867af280292cb641faba516ad4f467c.gif" /></figure></p>
 <p>最终实现的效果：</p>
-<p><figure style="flex: 26.956521739130434" ><img width="372" height="690" src="https://linsyorozuya.com/content/images/2016/01/c667f932a455b121f1934c8c5b754f34.gif" /></figure></p>
+<p><figure style="flex: 26.956521739130434" ><img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/1cb9ec5596c098f2fd4c9950426ac755.gif" /></figure></p>
 <h5>实现原理</h5>
 <p>首先从效果看锤子的亮点，像是从孔的下方移动。所以给人感觉是上面挖了一排孔，亮点在地道移动所以两个空中间的地方看不到移动的亮点。所以不能直接使用一个 view 移动来解决。</p>
 <p>恰巧看到另一篇文章，想到也许可以试试。</p>
@@ -107,11 +107,11 @@
 </ol>
 <p>3.<code>_hightLightView</code> 上添加 <code>_topHidenHightLightCircles</code> 视图，然后在 <code>_topHidenHightLightCircles</code> 上面添加相应数量的选中状态的圆<code>lightCircle</code>，注意他们的位置相对于 <code>LHPageControlview</code> 上的 <code>darkCircle</code>要一一对应。</p>
 <p>整个控件结构如下图：</p>
-<p><figure style="flex: 55.348837209302324" ><img width="952" height="860" src="https://linsyorozuya.com/content/images/2016/01/B8150BBE-FF77-4F04-BFA9-0A682359896E.png" /></figure></p>
+<p><figure style="flex: 55.348837209302324" ><img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/33b5d24e8e02bd6f462de2835fa96c73.png" /></figure></p>
 <p><strong>移动的时候，移动 <code>_hightLightView</code> 的同时 <code>_topHidenHightLightCircles</code> 往相反方向移动同样距离，这样在视觉上就好像 <code>_topHidenHightLightCircles</code> 是静止的，看上去只是 <code>_hightLightView</code> 在移动。</strong></p>
 <p><strong>这样当 <code>_hightLightView</code> 移动到选中状态的圆 <code>lightCircle</code> 时，相应的未选中状态的 <code>darkCircle</code> 上就像有高亮的圆 <code>lightCircle</code> 移动过来遮住并显示。</strong></p>
 <p>移动时如图：</p>
-<p><figure style="flex: 58.99470899470899" ><img width="446" height="378" src="https://linsyorozuya.com/content/images/2016/01/72D0810E-08D5-4876-BEA1-9D12452BCE7A.png" /></figure></p>
+<p><figure style="flex: 58.99470899470899" ><img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/184add337a7b4a8e5a199aa5ed5cfd38.png" /></figure></p>
 <p>移动的关键代码：</p>
 
 <pre><code>CGFloat scale = distance - (int)distance;
