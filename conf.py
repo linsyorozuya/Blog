@@ -3,7 +3,7 @@
 """
 
 # For Maverick
-site_prefix = "/Blog-With-GitHub/"
+site_prefix = "/Blog/"
 source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
@@ -15,18 +15,18 @@ template = {
 }
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "linsyorozuya/Blog-With-GitHub@gh-pages"
+    "repo": "linsyorozuya/Blog@gh-pages"
 }
 
 # 站点设置
-site_name = "博客"
+site_name = "Lin's よろづ屋"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2019-12-18T16:51+08:00"
-author = "H"
-email = "hi@imalan.cn"
-author_homepage = "https://www.imalan.cn"
-description = "只坚持一种正义。我的正义。"
-key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
+author = "H。H"
+email = "linsyorozuya@yahoo.com"
+author_homepage = "https://www.linsyorozuya.com"
+description = "吾性自足，不假外求"
+key_words = ['Maverick', 'Galileo', 'blog']
 language = 'zh-CN'
 external_links = [
     {
@@ -61,17 +61,17 @@ nav = [
 social_links = [
     {
         "name": "Twitter",
-        "url": "https://twitter.com/AlanDecode",
+        "url": "https://twitter.com/linsyorozuya",
         "icon": "gi gi-twitter"
     },
     {
         "name": "GitHub",
-        "url": "https://github.com/AlanDecode",
+        "url": "https://github.com/linsyorozuy",
         "icon": "gi gi-github"
     },
     {
         "name": "Weibo",
-        "url": "https://weibo.com/5245109677/",
+        "url": "https://weibo.com/2630651323/",
         "icon": "gi gi-weibo"
     }
 ]
