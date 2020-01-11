@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iOS Widget - 便宜吗 开发问题记录
-slug: code
+slug: iOS Widget - 便宜吗 开发问题记录
 date: 2017-01-09 16:50
 status: publish
 author: H。H

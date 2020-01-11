@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 禁止 Chrome 自动更新 (Mac)
-slug: typography
+slug: 禁止 Chrome 自动更新 (Mac)
 date: 2019-09-21 16:50
 status: publish
 author: H。H

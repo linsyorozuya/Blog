@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 实现 Smartisan OS 中首页的 PageControll 效果
-slug: code
+slug: 实现 Smartisan OS 中首页的 PageControll 效果
 date: 2016-01-02 16:50
 status: publish
 author: H。H

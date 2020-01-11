@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 让 Xcode 的代码更好看
-slug: code
+slug: 让 Xcode 的代码更好看
 date: 2019-10-02 16:50
 status: publish
 author: H。H
