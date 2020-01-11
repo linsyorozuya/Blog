@@ -13,7 +13,7 @@ tags:
 excerpt: 
 ---
 
-![](https://linsyorozuya.com/content/images/2017/07/---.png)
+![](media/---.png)
 
 WHY
 ---
@@ -46,7 +46,7 @@ WHY
 
 看使用效果：
 
-![](https://linsyorozuya.com/content/images/2017/07/---.gif)
+![](media/---.gif)
 
 官方文档关于 Today Extention 的篇幅不大。基本的要用的方法都讲到，然后再看看其他人的文章就可以开始入手了。（可以参考文章底部引用的两个链接地址。）
 

@@ -17,19 +17,19 @@ excerpt:
 
 锤子的效果：
 
-![](https://linsyorozuya.com/content/images/2016/01/2014-11-10-22_03_58.gif)
+![](media/2014-11-10-22_03_58.gif)
 
 首先 kittenyang 实现的，当亮点划过两个暗点的中间是还是显示的
 
-![](https://linsyorozuya.com/content/images/2016/01/2014-11-10-22_43_44.gif)
+![](media/2014-11-10-22_43_44.gif)
 
 再看视错觉文章里的效果：
 
-![](https://linsyorozuya.com/content/images/2016/01/545446-20151125131300812-815351965.gif)
+![](media/545446-20151125131300812-815351965.gif)
 
 最终实现的效果：
 
-![](https://linsyorozuya.com/content/images/2016/01/c667f932a455b121f1934c8c5b754f34.gif)
+![](media/c667f932a455b121f1934c8c5b754f34.gif)
 
 ##### 实现原理
 
@@ -49,7 +49,7 @@ excerpt:
 
 整个控件结构如下图：
 
-![](https://linsyorozuya.com/content/images/2016/01/B8150BBE-FF77-4F04-BFA9-0A682359896E.png)
+![](media/B8150BBE-FF77-4F04-BFA9-0A682359896E.png)
 
 **移动的时候，移动 `_hightLightView` 的同时 `_topHidenHightLightCircles` 往相反方向移动同样距离，这样在视觉上就好像 `_topHidenHightLightCircles` 是静止的，看上去只是 `_hightLightView` 在移动。**
 
@@ -57,7 +57,7 @@ excerpt:
 
 移动时如图：
 
-![](https://linsyorozuya.com/content/images/2016/01/72D0810E-08D5-4876-BEA1-9D12452BCE7A.png)
+![](media/72D0810E-08D5-4876-BEA1-9D12452BCE7A.png)
 
 移动的关键代码：
 
