@@ -6,10 +6,9 @@ date: 2020/01/11 18:00:00
 status: publish
 author: H.H
 categories: 
-  - Maverick
-  - Dev
+  - 其他
 tags: 
-  - theme
+  - 其他
 ---
 
 这里是我的个人博客，通过 GitHub 管理与构建。
