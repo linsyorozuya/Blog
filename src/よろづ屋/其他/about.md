@@ -11,7 +11,7 @@ tags:
   - 其他
 ---
 
-![辉宝小朋友睡出痕迹](/Users/linsyorozuya/Library/Mobile Documents/com~apple~CloudDocs/Blog/src/よろづ屋/其他/about.assets/IMG_1317.jpeg)
+![辉宝小朋友睡出痕迹](/Users/linsyorozuya/Documents/Blog/src/よろづ屋/其他/about.assets/IMG_1317.jpeg)
 
 这里是我的个人博客，通过 GitHub 管理与构建。
 
