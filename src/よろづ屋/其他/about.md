@@ -11,7 +11,9 @@ tags:
   - 其他
 ---
 
-![IMG_1317](/Users/linsyorozuya/Documents/Blog/src/よろづ屋/其他/about.assets/IMG_1317.jpeg)这里是我的个人博客，通过 GitHub 管理与构建。   
+
+
+![IMG_1317](media/IMG_1317.jpeg)这里是我的个人博客，通过 GitHub 管理与构建。   
 
 
 ## Contact
