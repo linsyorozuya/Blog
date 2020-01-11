@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Maverick,Galileo,blog" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="Lin's よろづ屋 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Lin's よろづ屋 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/galileo-e255dd166a.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/8ece5abdfdcbd40a9527820e80eff4c3.json"
+        }
+    </script>
+    
+<title>iOS Widget - 便宜吗 开发问题记录 - Lin's よろづ屋</title>
+<meta name="author" content="H。H" />
+<meta name="description" content="" />
+<meta property="og:title" content="iOS Widget - 便宜吗 开发问题记录 - Lin's よろづ屋" />
+<meta property="og:description" content="" />
+<meta property="og:site_name" content="Lin's よろづ屋" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/iOS Widget - 便宜吗 开发问题记录/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2017-01-09T16:50:00-00.00" />
+<meta name="twitter:title" content="iOS Widget - 便宜吗 开发问题记录 - Lin's よろづ屋" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">Lin's よろづ屋</a></h1>
+                        <p>吾性自足，不假外求</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">iOS Widget - 便宜吗 开发问题记录</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>H。H</span>
+                <time>
+                    2017-01-09
+                </time>
+                
+                in <a no-style class="category" href="/category/iOS/">
+                    iOS
+                </a>
+                
+                
+                <span class="leancloud_visitors" 
+                    id="/archives/iOS Widget - 便宜吗 开发问题记录/" 
+                    data-flag-title="iOS Widget - 便宜吗 开发问题记录"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
+            </span>
+            <div class="ga-content_body">
+                <p><figure style="flex: 115.94202898550725" ><img width="480" height="207" src="https://linsyorozuya.com/content/images/2017/07/---.png" /></figure></p>
+<h2>WHY</h2>
+<p>很久很久以前…</p>
+<p>淘宝是有价格变化曲线的，利用曲线可以很大程度上防止商家的虚假促销。但是不知到出于什么原因后来取消了这个功能。</p>
+<p>庆幸的是浏览器上目前还有几款插件来显示历史价格，不幸的是手机上并没有。</p>
+<p>只发现一款叫 <code>比一比价</code> 的 app 提供了这个功能（没有开发 widget），而且能查询大部分电商商品的价格曲线。</p>
+<p>虽然可以查询，但是这个 app 的搜索过程繁琐，要是想查询一个商品的价格，你需要四个步骤：</p>
+<ul>
+<li><ol>
+<li>复制商品的衔接</li>
+</ol>
+</li>
+<li><ol>
+<li>打开 app</li>
+</ol>
+</li>
+<li><ol>
+<li>黏贴 链接</li>
+</ol>
+</li>
+<li><ol>
+<li>点击搜索</li>
+</ol>
+</li>
+</ul>
+<p>可是我喜欢那种 Pin 和 TodayMind 那种无需打开 app 只需下拉通知栏就能使用的的快捷方式 @。@，所以我想要的步骤是：</p>
+<ul>
+<li>复制商品链接</li>
+<li>下拉通知栏</li>
+</ul>
+<p>所以来了兴趣想自己写个 widget, 也学习下了解下通知栏的开发~</p>
+<p><strong>（开发使用的是 <code>比一比价</code> 手机端使用的查询接口。由于数据不全，也就没做显示价格曲线的功能了）</strong></p>
+<p>这个 APP 叫<code>便宜吗</code>，顺便也瞎弄了个图标~</p>
+<p>看使用效果：</p>
+<p><figure style="flex: 28.138528138528137" ><img width="260" height="462" src="https://linsyorozuya.com/content/images/2017/07/---.gif" /></figure></p>
+<p>官方文档关于 Today Extention 的篇幅不大。基本的要用的方法都讲到，然后再看看其他人的文章就可以开始入手了。（可以参考文章底部引用的两个链接地址。）</p>
+<p>便宜吗的功能实现上很简单，主要就三个步骤：</p>
+<ol>
+<li>获取系统剪贴板上的链接：</li>
+<li>利用链接请求数据</li>
+<li>将数据显示到控件上</li>
+</ol>
+<p>当然还有一些细节处理，比如保存上次搜索的历史记录、如果地址相同显示上次搜索的数据等等。</p>
+<p>这里主要记录下开发中遇到的一些问题（基于 iOS 10）：</p>
+<ul>
+<li><strong>高度问题</strong>：iOS 10 后 widget 高度有两种模式：折叠和展开。<br>
+折叠模式的最小高度是 110，但也是这种模式下的最大高度。对的，不能更改 @。@。<br>
+展开模式有最大高度的限制，根据设备的不同最大高度也是不同。</li>
+</ul>
+<p>设置扩展模式需要添加以下代码：</p>
+
+<pre><code>- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+}
+
+#pragma mark - 切换展开和折叠的模式执行的方法
+- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize
+{
+    if (activeDisplayMode == NCWidgetDisplayModeCompact) {
+        self.preferredContentSize = maxSize;
+    }else
+    {
+
+        self.preferredContentSize = CGSizeMake(maxSize.width, 300);
+    }
+}</code></pre>
+<ul>
+<li><strong>背景色问题</strong>：默认的 widget 本景色是一个有些毛玻璃效果的白色。你如果试图改变成其他颜色的话，目前我发现的一个问题是 widget 底部两个圆角，在下拉通知栏的时候都是直角，通知栏下拉完全后，会有个直角变成默认的圆角的突变。目前我的解决办法是添加圆角来处理（测试圆角为 15 ）。=。=</li>
+</ul>
+
+<pre><code>- (void)addCornerRadius:(CGSize)radius
+{
+
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, _contentContainerView.bounds.size.width,_contentContainerView.bounds.size.height) byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:radius];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = _contentContainerView.bounds;
+    maskLayer.path = maskPath.CGPath;
+    _contentContainerView.layer.mask = maskLayer;
+}</code></pre>
+<ul>
+<li><strong>数据问题</strong>：如果你想在 widget 中，添加一个全局变量来保存临时数据是不可行的。每次下拉通知栏后，所有数据都会清空。相当于每次下拉通知栏，所有的 widget 的生命周期又重新开始。收起通知栏所有 widget 生命周期结束。所以如果要保存上次的变量，可以用 NSUserDefaults 的方法来保存。</li>
+</ul>
+<h2>总结</h2>
+<p>widget 开发还是要看需求是否符合 widget 的使用场景。由于高度的限制，其实更能去思考开发的核心功能是什么。如何充分利用 110 的空间去做一些便捷实用的事情，也许才是开发 widget 开发真正思考的事情吧。</p>
+<p><a href="https://github.com/linsyorozuya/IsRealCheap">代码地址 GitHub</a></p>
+<h5>额~：</h5>
+<p><code>之前询问过 manmanbuy.com 能否使用相关接口，被否定后我建议他们做个相似的插件查询价格。后来真的做了并且已上线叫 历史价格查询。有这方面需求的可以去下载这个软件。</code></p>
+<p><strong>相关链接：</strong></p>
+<ul>
+<li><p><a href="http://www.jianshu.com/p/ca3e11d7686c">iOS 开发之 widget 实现</a></p>
+</li>
+<li><p><a href="https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/Today.html#//apple_ref/doc/uid/TP40014214-CH11-SW1">App Extension Programming Guide: Today</a></p>
+</li>
+</ul>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/iOS/">#iOS</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/life/">#life</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <a class="ga-highlight" href="/archives/2017/">2017</a>
+        <p class="yue">生活</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/实现 Smartisan OS 中首页的 PageControll 效果/">实现 Smartisan OS 中首页的 PageControll 效果</a>
+        <p class="yue">在看 kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果 和 视错觉：从一个看似简单的自定义控件说起 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。</p>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "eMmVkL0FDqrmunWuz9m5sBGn-gzGzoHsz", "appKey": "RsDa5XAzjj8cWQLigV7YezRM", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">Lin's よろづ屋</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2020 linsyorozuya</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/linsyorozuya" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/linsyorozuya" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="https://weibo.com/2630651323/" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2020-01-11T12:00+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/galileo-dc4baa7cf4.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>
