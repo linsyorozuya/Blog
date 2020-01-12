@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/f08a93c8529e98d063161d9e7d107fdc.json"
+            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/15f49bc1a6bfd0b5cd28ffe0aec0e0de.json"
         }
     </script>
     
@@ -87,13 +87,13 @@
                 <blockquote><p>在看 <a href="http://kittenyang.com/pagecontrol/"><code>kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果</code></a> 和 <a href="http://www.cnblogs.com/ludashi/p/4994520.html"><code>视错觉：从一个看似简单的自定义控件说起</code></a> 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。</p>
 </blockquote>
 <p>锤子的效果：</p>
-<p><figure style="flex: 75.38461538461539" ><img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/74684d37cfdca986470044aab4d7e0e1.gif" /></figure></p>
+<p><figure style="flex: 75.38461538461539" ><img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /></figure></p>
 <p>首先 kittenyang 实现的，当亮点划过两个暗点的中间是还是显示的</p>
-<p><figure style="flex: 80.05319148936171" ><img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/7fbbbc0e1af11936bac0a7375f7b195e.gif" /></figure></p>
+<p><figure style="flex: 80.05319148936171" ><img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/7c62c3c797cc897b929bd28edad5d2f9.gif" /></figure></p>
 <p>再看视错觉文章里的效果：</p>
-<p><figure style="flex: 28.181818181818183" ><img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/f653eca5b408174a001e3dcd3992fcd7.gif" /></figure></p>
+<p><figure style="flex: 28.181818181818183" ><img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/e239797e62ada73cf93b3aa124fb9614.gif" /></figure></p>
 <p>最终实现的效果：</p>
-<p><figure style="flex: 26.956521739130434" ><img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/6167e162a50cc805f7713fbef335aae0.gif" /></figure></p>
+<p><figure style="flex: 26.956521739130434" ><img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/6441c406e870d24f369ac1a0640b6249.gif" /></figure></p>
 <h5>实现原理</h5>
 <p>首先从效果看锤子的亮点，像是从孔的下方移动。所以给人感觉是上面挖了一排孔，亮点在地道移动所以两个空中间的地方看不到移动的亮点。所以不能直接使用一个 view 移动来解决。</p>
 <p>恰巧看到另一篇文章，想到也许可以试试。</p>
@@ -107,11 +107,11 @@
 </ol>
 <p>3.<code>_hightLightView</code> 上添加 <code>_topHidenHightLightCircles</code> 视图，然后在 <code>_topHidenHightLightCircles</code> 上面添加相应数量的选中状态的圆<code>lightCircle</code>，注意他们的位置相对于 <code>LHPageControlview</code> 上的 <code>darkCircle</code>要一一对应。</p>
 <p>整个控件结构如下图：</p>
-<p><figure style="flex: 55.348837209302324" ><img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/20af22a655eb1b2e1c923cbf4f09e08a.png" /></figure></p>
+<p><figure style="flex: 55.348837209302324" ><img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/038b67a55ab229d521c1a9d16aaada81.png" /></figure></p>
 <p><strong>移动的时候，移动 <code>_hightLightView</code> 的同时 <code>_topHidenHightLightCircles</code> 往相反方向移动同样距离，这样在视觉上就好像 <code>_topHidenHightLightCircles</code> 是静止的，看上去只是 <code>_hightLightView</code> 在移动。</strong></p>
 <p><strong>这样当 <code>_hightLightView</code> 移动到选中状态的圆 <code>lightCircle</code> 时，相应的未选中状态的 <code>darkCircle</code> 上就像有高亮的圆 <code>lightCircle</code> 移动过来遮住并显示。</strong></p>
 <p>移动时如图：</p>
-<p><figure style="flex: 58.99470899470899" ><img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/3d375baee6572b33df154bd9fa3ea9f7.png" /></figure></p>
+<p><figure style="flex: 58.99470899470899" ><img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/b292297161f63b1badaae340db59995b.png" /></figure></p>
 <p>移动的关键代码：</p>
 
 <pre><code>CGFloat scale = distance - (int)distance;
