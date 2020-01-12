@@ -84,20 +84,20 @@ $$C_{m\times k}=A_{m\times n}\cdot B_{n\times k}$$
 
 ### Single figure
 
-![Princess Mononoke](./images/Mononoke_Hime.jpg)
+![Princess Mononoke](media/Mononoke_Hime.jpg)
 
 ### Photoset
 
 [photos]
-![](./images/IMG_0073.jpeg)
+![](media/IMG_0073.jpeg)
 ![][1]
-![](./images/IMG_0053.jpeg)
+![](media/IMG_0053.jpeg)
 [/photos]
 
 [photos]
-![](./images/IMG_0039.jpeg)
-![](./images/IMG_00510.jpeg)
-![](./images/IMG_0005.jpeg)
+![](media/IMG_0039.jpeg)
+![](media/IMG_00510.jpeg)
+![](media/IMG_0005.jpeg)
 [/photos]
 
 ## Table
