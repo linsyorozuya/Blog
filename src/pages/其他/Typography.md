@@ -3,7 +3,7 @@ layout: post
 title: Hello World!
 slug: typography
 date: 2019-12-16 16:50
-status: publish
+status: draft
 author: AlanDecode
 categories: 
   - Maverick
