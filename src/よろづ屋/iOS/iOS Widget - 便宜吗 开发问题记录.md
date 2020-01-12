@@ -10,7 +10,7 @@ categories:
 tags:
   - iOS
   - life
-excerpt: 
+excerpt: 很久很久以前…淘宝是有价格变化曲线的，利用曲线可以很大程度上防止商家的虚假促销。但是不知到出于什么原因后来取消了这个功能。
 ---
 
 ![](media/---.png)
