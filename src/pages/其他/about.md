@@ -11,7 +11,7 @@ tags:
   - 其他
 ---
 
-![IMG_1317](../../media/IMG_1317.jpeg)
+![IMG_1378](../../media/IMG_1378.jpeg)
 
 这里是我的个人博客，通过 GitHub 管理与构建。   
 
