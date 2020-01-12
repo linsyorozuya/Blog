@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Sun, 12 Jan 2020 01:27:01 +0806</lastBuildDate><pubDate>Sun, 12 Jan 2020 01:27:01 +0806</pubDate><item><title>2015</title><link>/archives/2015/</link><description>&lt;blockquote&gt;&lt;p&gt;致我们心中尚未崩坏的地方&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Sun, 12 Jan 2020 01:32:21 +0806</lastBuildDate><pubDate>Sun, 12 Jan 2020 01:32:21 +0806</pubDate><item><title>2015</title><link>/archives/2015/</link><description>&lt;blockquote&gt;&lt;p&gt;致我们心中尚未崩坏的地方&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;天气冷&lt;/p&gt;
 &lt;p&gt;听着五月天的闽南语新歌《勇敢》&lt;/p&gt;
@@ -338,7 +338,7 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 &lt;h3&gt;放置主题文件地址&lt;/h3&gt;
 &lt;p&gt;下载主题后将文件放入 &lt;code&gt;~/Library/Developer/Xcode/UserData/FontAndColorThemes&lt;/code&gt;, 然后重启 Xcode 在设置里选择主题即可。&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 79.29883138564274" &gt;&lt;img width="1900" height="1198" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/2b9e8f99475e45326fa0cbbcce57ac8d.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/让 Xcode 的代码更好看/</guid><pubDate>Wed, 02 Oct 2019 16:50:00 +0806</pubDate></item><item><title>Hello World!</title><link>/archives/typography/</link><description>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/让 Xcode 的代码更好看/</guid><pubDate>Wed, 02 Oct 2019 16:50:00 +0806</pubDate></item><item><title>Hello World!</title><link>/archives/typography/</link><description>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading-----111&lt;/h2&gt;
 &lt;h3&gt;L3 Heading&lt;/h3&gt;
 &lt;h4&gt;L4 Heading&lt;/h4&gt;
 &lt;h5&gt;L5 Heading&lt;/h5&gt;
