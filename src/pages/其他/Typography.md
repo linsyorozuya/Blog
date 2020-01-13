@@ -1,18 +1,16 @@
 ---
-​---
 layout: post
-title: 我的第一篇
-slug: my-first-awesome-post
-date: 2010-12-17 20:34
+title: Hello World!
+slug: typography
+date: 2015-12-16
 status: publish
-author: <填写你的名字>
+author: AlanDecode
 categories: 
-  - 默认分类
-tags: 
-  - 博客
-  - GitHub
-excerpt: Hello World!
-​---
+  - Maverick
+tags:
+  - Design
+  - Typography
+excerpt: 这是一篇示例文章，在这里你可以看到常用页面元素的显示效果。
 ---
 
 [notice]这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！[/notice]
