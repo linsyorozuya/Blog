@@ -1,7 +1,7 @@
 ---
 ​---
 layout: post
-title: 我的第一篇文章
+title: 我的第一篇
 slug: my-first-awesome-post
 date: 2010-12-17 20:34
 status: publish
