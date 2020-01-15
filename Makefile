@@ -1,4 +1,4 @@
-.PHONY: theme mvrk site
+.PHONY: theme mvrk site var-lost
 default: site
 
 theme:
@@ -22,3 +22,7 @@ site:
 	git add .
 	git commit -m "Update site ${msg}"
 	git push
+
+var-lost:
+	export foo=bar
+	echo "foo=[$$foo]"
