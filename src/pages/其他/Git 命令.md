@@ -1,8 +1,18 @@
+---
+layout: post
+title: Git 命令
+slug: Git 命令
+date: 2020-01-26
+status: publish
+author: H。H
+tags:
+  - Git
+excerpt: 
+---
+
 
 
 > Git 笔记用于回顾。
-
-
 
 ### 创建新分支并切换
 
