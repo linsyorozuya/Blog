@@ -14,6 +14,26 @@ excerpt:
 
 > Git 笔记用于回顾。
 
+
+
+### 查看当前文件状态
+
+要查看哪些文件处于什么状态，可以用 `git status` 命令。 
+
+`git status` 命令的输出十分详细，但其用语有些繁琐。 如果你使用 git status -s 命令或 git status --short 命令，你将得到一种更为紧凑的格式输出。
+
+
+
+### 查看提交历史
+
+`git log` 会按提交时间列出所有的更新。
+
+`git log -p`用来显示每次提交的内容差异。
+
+`git log -p -2`用来显示每次提交的内容差异，-2 显示最近两次提交。
+
+
+
 ### 创建新分支并切换
 
 `git checkout -b newBranch` 创建一个新的叫 `newBranch` 的分支，并切换到该分支。
