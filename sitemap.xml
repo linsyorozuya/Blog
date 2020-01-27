@@ -26,13 +26,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/typography/</loc>
-    <lastmod>2019-12-18</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-</url>
-
-<url>
     <loc>/archives/让 Xcode 的代码更好看/</loc>
     <lastmod>2019-10-02</lastmod>
     <changefreq>always</changefreq>
@@ -84,6 +77,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
     <loc>/archives/2015/</loc>
     <lastmod>2015-12-31</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/typography/</loc>
+    <lastmod>2015-12-18</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
