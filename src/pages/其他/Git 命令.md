@@ -2,7 +2,7 @@
 layout: post
 title: Git 命令
 slug: Git 命令
-date: 2020-01-26
+date: 2020/01/26
 status: publish
 author: H。H
 tags:
