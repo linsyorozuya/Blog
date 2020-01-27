@@ -2,7 +2,7 @@
 layout: page
 title: 关于
 slug: about
-date: 2020/01/11 18:00:00
+date: 2020/01/11
 status: publish
 author: H.H
 categories: 
