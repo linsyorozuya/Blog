@@ -3,7 +3,7 @@ layout: post
 title: Hello World!
 slug: typography
 date: 2010-12-18
-status: publish
+status: hidden
 author: AlanDecode
 categories: 
   - Maverick
