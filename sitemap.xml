@@ -19,7 +19,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/Git 命令/</loc>
+    <loc>/archives/Git 命令备忘/</loc>
     <lastmod>2020-01-26</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
