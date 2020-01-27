@@ -2,7 +2,7 @@
 layout: post
 title: Hello World!
 slug: typography
-date: 2010-12-18
+date: 2010/12/18
 status: hidden
 author: AlanDecode
 categories: 
