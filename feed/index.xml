@@ -1,77 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 30 Jan 2020 05:48:38 +0806</lastBuildDate><pubDate>Thu, 30 Jan 2020 05:48:38 +0806</pubDate><item><title>实现 Smartisan OS 中首页的 PageControll 效果</title><link>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</link><description>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;锤子的效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 75.38461538461539" &gt;&lt;img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;首先 kittenyang 实现的，当亮点划过两个暗点的中间是还是显示的&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 80.05319148936171" &gt;&lt;img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/7c62c3c797cc897b929bd28edad5d2f9.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;再看视错觉文章里的效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 28.181818181818183" &gt;&lt;img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/e239797e62ada73cf93b3aa124fb9614.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;最终实现的效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 26.956521739130434" &gt;&lt;img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/6441c406e870d24f369ac1a0640b6249.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h5&gt;实现原理&lt;/h5&gt;
-&lt;p&gt;首先从效果看锤子的亮点，像是从孔的下方移动。所以给人感觉是上面挖了一排孔，亮点在地道移动所以两个空中间的地方看不到移动的亮点。所以不能直接使用一个 view 移动来解决。&lt;/p&gt;
-&lt;p&gt;恰巧看到另一篇文章，想到也许可以试试。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原理就是：使用 mask 隐藏和利用相对移动产生时差。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;实现步骤：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在自定义的 &lt;code&gt;LHPageControlview&lt;/code&gt; 上创建几个未选中状态颜色的圆 darkCircle。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在自定义的 &lt;code&gt;LHPageControlview&lt;/code&gt; 上创建一个圆大小的但透明的&lt;code&gt;_hightLightView&lt;/code&gt;，它的作用就是利用 &lt;code&gt;mask&lt;/code&gt; 属性将它子视图中超出 &lt;code&gt;_hightLightView&lt;/code&gt; 显示区域的其他高亮的几个圆藏起来。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;3.&lt;code&gt;_hightLightView&lt;/code&gt; 上添加 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 视图，然后在 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 上面添加相应数量的选中状态的圆&lt;code&gt;lightCircle&lt;/code&gt;，注意他们的位置相对于 &lt;code&gt;LHPageControlview&lt;/code&gt; 上的 &lt;code&gt;darkCircle&lt;/code&gt;要一一对应。&lt;/p&gt;
-&lt;p&gt;整个控件结构如下图：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 55.348837209302324" &gt;&lt;img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/038b67a55ab229d521c1a9d16aaada81.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;移动的时候，移动 &lt;code&gt;_hightLightView&lt;/code&gt; 的同时 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 往相反方向移动同样距离，这样在视觉上就好像 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 是静止的，看上去只是 &lt;code&gt;_hightLightView&lt;/code&gt; 在移动。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;这样当 &lt;code&gt;_hightLightView&lt;/code&gt; 移动到选中状态的圆 &lt;code&gt;lightCircle&lt;/code&gt; 时，相应的未选中状态的 &lt;code&gt;darkCircle&lt;/code&gt; 上就像有高亮的圆 &lt;code&gt;lightCircle&lt;/code&gt; 移动过来遮住并显示。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;移动时如图：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 58.99470899470899" &gt;&lt;img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/b292297161f63b1badaae340db59995b.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;移动的关键代码：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;CGFloat scale = distance - (int)distance;
-if (scale == 0 &amp;amp;&amp;amp; distance&amp;gt;=1) {
-    scale = 1;
-}
-
-CGFloat moveDistance = distance*(kPageHeight+5);
-
-CGAffineTransform transform = CGAffineTransformIdentity;
-
-
-
-transform = CGAffineTransformTranslate(transform, moveDistance, 0);
-
-
-if (scale &amp;gt;= 0 &amp;amp;&amp;amp; scale &amp;lt;= 0.2) {
-    transform = CGAffineTransformScale(transform, 1.0-scale, 1.0-scale);
-}
-
-if (scale &amp;gt; 0.2 &amp;amp;&amp;amp; scale &amp;lt; 0.8) {
-    transform = CGAffineTransformScale(transform, 0.8, 0.8);
-}
-
-if (scale &amp;gt; 0.8 &amp;amp;&amp;amp; scale &amp;lt;= 1) {
-    transform = CGAffineTransformScale(transform, scale, scale);
-}
-
-
-_hightLightView.layer.affineTransform = transform;
-
-
-
-
-transform = CGAffineTransformIdentity;
-
-transform = CGAffineTransformTranslate(transform, -moveDistance, 0);
-
-_topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样就实现了基本效果。&lt;/p&gt;
-&lt;p&gt;~我在中间为了实现缩小效果，使用实时改变 _hightLightView layer 的 cornerRadius 大小。如果慢慢拖动会发现中间是有些问题的。(希望指教有什么好的方法 =。= 谢过)~&lt;/p&gt;
-&lt;p&gt;解决&lt;br&gt;
-还是得自己解决。=。=。最近看到 &lt;code&gt;CGAffineTransform&lt;/code&gt; 这个类，可以直接根据自己的中心点来进行缩放和移动。省去了再去计算在父 view 的坐标去移动。&lt;/p&gt;
-&lt;p&gt;Github 代码：&lt;a href="https://github.com/LinBling/LHPageControlTry"&gt;&lt;code&gt;传送门&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/实现 Smartisan OS 中首页的 PageControll 效果/</guid><pubDate>Sat, 02 Jan 2016 00:00:00 +0806</pubDate></item><item><title>iOS Widget - 便宜吗 开发问题记录</title><link>/archives/iOS Widget - 便宜吗 开发问题记录/</link><description>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Sat, 01 Feb 2020 09:59:35 +0806</lastBuildDate><pubDate>Sat, 01 Feb 2020 09:59:35 +0806</pubDate><item><title>iOS Widget - 便宜吗 开发问题记录</title><link>/archives/iOS Widget - 便宜吗 开发问题记录/</link><description>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;WHY&lt;/h2&gt;
 &lt;p&gt;很久很久以前…&lt;/p&gt;
 &lt;p&gt;淘宝是有价格变化曲线的，利用曲线可以很大程度上防止商家的虚假促销。但是不知到出于什么原因后来取消了这个功能。&lt;/p&gt;
@@ -341,7 +269,7 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 &lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;今年算是多事的一年，发现了一些人性的丑陋。也开始发现自己的不足。&lt;/p&gt;
 &lt;p&gt;最大的收获是懂得了财商的重要性。虽然有点晚了，但是亡羊补牢为时不晚。&lt;/p&gt;
-</description><author>linsyorozuya@yahoo.com (H.H)</author><guid isPermaLink="true">/archives/2019/</guid><pubDate>Sat, 11 Jan 2020 00:00:00 +0806</pubDate></item><item><title>Git 命令备忘</title><link>/archives/Git 命令备忘/</link><description>&lt;blockquote&gt;&lt;p&gt;Git 笔记用于回顾。&lt;/p&gt;
+</description><author>linsyorozuya@yahoo.com (H.H)</author><guid isPermaLink="true">/archives/2019/</guid><pubDate>Sat, 11 Jan 2020 00:00:00 +0806</pubDate></item><item><title>Git 命令备忘</title><link>/archives/Git 命令备忘/</link><description>&lt;blockquote&gt;&lt;p&gt;笔记用于回顾。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;查看当前文件状态&lt;/h3&gt;
 &lt;p&gt;要查看哪些文件处于什么状态，可以用 &lt;code&gt;git status&lt;/code&gt; 命令。&lt;/p&gt;
@@ -391,4 +319,48 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 &lt;p&gt;早上去买菜，马路上都没什么车和人。一点春节的气息都没有。今年没有抢醋的，倒是出现了抢米的。&lt;/p&gt;
 &lt;p&gt;人人戴口罩，酒店都开始卖菜了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;希望 2020 否极泰来。&lt;/strong&gt;&lt;/p&gt;
-</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/2020 灰色的一月/</guid><pubDate>Mon, 27 Jan 2020 00:00:00 +0806</pubDate></item></channel></rss>
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/2020 灰色的一月/</guid><pubDate>Mon, 27 Jan 2020 00:00:00 +0806</pubDate></item><item><title>命令行备忘</title><link>/archives/命令行备忘/</link><description>&lt;blockquote&gt;&lt;p&gt;用到一个记一个。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;创建文件&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;创建 helloword.txt 文件
+touch helloword.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;创建文件夹&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;创建 html 文件夹
+mkdir html
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;展示文件内容&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;展示 helloword.txt 文件内容
+cat helloword.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;查看当前文件夹&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Finder 打开当前路径的文件夹&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;open .
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;移动文件和文件夹&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv file_to_move destination_directory
+mv directory_to_move destination_directory
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;重命名文件&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv old_file_name new_file_name
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;拷贝文件和文件夹&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp file_to_copy new_file_name
+
+拷贝文件夹需要加 -r 参数
+cp -r directory_to_copy new_directory_name
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;删除文件和文件夹&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rm file_name
+
+删除文件夹需要加 -r 参数
+rm -r directory_name
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;利用上一个命令的最后一个参数&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir ~/Desktop/html
+&lt;span class="nb"&gt;cd&lt;/span&gt; !$ 执行此命令会自动生成命令 
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/Desktop/html
+&lt;/pre&gt;&lt;/div&gt;
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/命令行备忘/</guid><pubDate>Sat, 01 Feb 2020 00:00:00 +0806</pubDate></item></channel></rss>
