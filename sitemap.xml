@@ -82,6 +82,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/iOS 自定义控件适应内容大小问题/</loc>
+    <lastmod>2016-11-08</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</loc>
     <lastmod>2016-01-02</lastmod>
     <changefreq>always</changefreq>
