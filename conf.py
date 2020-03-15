@@ -95,7 +95,9 @@ head_addon = r'''
 
 '''
 
-footer_addon = ''
+footer_addon = footer_addon = r'''
+<a no-style href="http://beian.miit.gov.cn" target="_blank">闽ICP备15023879号</a>
+'''
 
 body_addon = ''
 
