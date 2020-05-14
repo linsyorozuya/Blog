@@ -1,89 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Mon, 27 Apr 2020 03:14:08 +0806</lastBuildDate><pubDate>Mon, 27 Apr 2020 03:14:08 +0806</pubDate><item><title>iOS Widget - 便宜吗 开发问题记录</title><link>/archives/iOS Widget - 便宜吗 开发问题记录/</link><description>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2&gt;WHY&lt;/h2&gt;
-&lt;p&gt;很久很久以前…&lt;/p&gt;
-&lt;p&gt;淘宝是有价格变化曲线的，利用曲线可以很大程度上防止商家的虚假促销。但是不知到出于什么原因后来取消了这个功能。&lt;/p&gt;
-&lt;p&gt;庆幸的是浏览器上目前还有几款插件来显示历史价格，不幸的是手机上并没有。&lt;/p&gt;
-&lt;p&gt;只发现一款叫 &lt;code&gt;比一比价&lt;/code&gt; 的 app 提供了这个功能（没有开发 widget），而且能查询大部分电商商品的价格曲线。&lt;/p&gt;
-&lt;p&gt;虽然可以查询，但是这个 app 的搜索过程繁琐，要是想查询一个商品的价格，你需要四个步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;复制商品的衔接&lt;/li&gt;
-&lt;li&gt;打开 app&lt;/li&gt;
-&lt;li&gt;黏贴 链接&lt;/li&gt;
-&lt;li&gt;点击搜索&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可是我喜欢那种 Pin 和 TodayMind 那种无需打开 app 只需下拉通知栏就能使用的的快捷方式 @。@，所以我想要的步骤是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;复制商品链接&lt;/li&gt;
-&lt;li&gt;下拉通知栏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以来了兴趣想自己写个 widget, 也学习下了解下通知栏的开发~&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;（开发使用的是 &lt;code&gt;比一比价&lt;/code&gt; 手机端使用的查询接口。由于数据不全，也就没做显示价格曲线的功能了）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这个 APP 叫&lt;code&gt;便宜吗&lt;/code&gt;，顺便也瞎弄了个图标~&lt;/p&gt;
-&lt;p&gt;看使用效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 28.138528138528137" &gt;&lt;img width="260" height="462" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/caa79fa6370afa3313335584b07d5dcf.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;官方文档关于 Today Extention 的篇幅不大。基本的要用的方法都讲到，然后再看看其他人的文章就可以开始入手了。（可以参考文章底部引用的两个链接地址。）&lt;/p&gt;
-&lt;p&gt;便宜吗的功能实现上很简单，主要就三个步骤：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;获取系统剪贴板上的链接：&lt;/li&gt;
-&lt;li&gt;利用链接请求数据&lt;/li&gt;
-&lt;li&gt;将数据显示到控件上&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;当然还有一些细节处理，比如保存上次搜索的历史记录、如果地址相同显示上次搜索的数据等等。&lt;/p&gt;
-&lt;p&gt;这里主要记录下开发中遇到的一些问题（基于 iOS 10）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;高度问题&lt;/strong&gt;：iOS 10 后 widget 高度有两种模式：折叠和展开。&lt;br&gt;
-折叠模式的最小高度是 110，但也是这种模式下的最大高度。对的，不能更改 @。@。&lt;br&gt;
-展开模式有最大高度的限制，根据设备的不同最大高度也是不同。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;设置扩展模式需要添加以下代码：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
-}
-
-#pragma mark - 切换展开和折叠的模式执行的方法
-- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize
-{
-    if (activeDisplayMode == NCWidgetDisplayModeCompact) {
-        self.preferredContentSize = maxSize;
-    }else
-    {
-
-        self.preferredContentSize = CGSizeMake(maxSize.width, 300);
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;背景色问题&lt;/strong&gt;：默认的 widget 本景色是一个有些毛玻璃效果的白色。你如果试图改变成其他颜色的话，目前我发现的一个问题是 widget 底部两个圆角，在下拉通知栏的时候都是直角，通知栏下拉完全后，会有个直角变成默认的圆角的突变。目前我的解决办法是添加圆角来处理（测试圆角为 15 ）。=。=&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;- (void)addCornerRadius:(CGSize)radius
-{
-
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, _contentContainerView.bounds.size.width,_contentContainerView.bounds.size.height) byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:radius];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = _contentContainerView.bounds;
-    maskLayer.path = maskPath.CGPath;
-    _contentContainerView.layer.mask = maskLayer;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;数据问题&lt;/strong&gt;：如果你想在 widget 中，添加一个全局变量来保存临时数据是不可行的。每次下拉通知栏后，所有数据都会清空。相当于每次下拉通知栏，所有的 widget 的生命周期又重新开始。收起通知栏所有 widget 生命周期结束。所以如果要保存上次的变量，可以用 NSUserDefaults 的方法来保存。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;widget 开发还是要看需求是否符合 widget 的使用场景。由于高度的限制，其实更能去思考开发的核心功能是什么。如何充分利用 110 的空间去做一些便捷实用的事情，也许才是开发 widget 开发真正思考的事情吧。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/linsyorozuya/IsRealCheap"&gt;代码地址 GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;h5&gt;额~：&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;之前询问过 manmanbuy.com 能否使用相关接口，被否定后我建议他们做个相似的插件查询价格。后来真的做了并且已上线叫 历史价格查询。有这方面需求的可以去下载这个软件。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;相关链接：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="http://www.jianshu.com/p/ca3e11d7686c"&gt;iOS 开发之 widget 实现&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/Today.html#//apple_ref/doc/uid/TP40014214-CH11-SW1"&gt;App Extension Programming Guide: Today&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/iOS Widget - 便宜吗 开发问题记录/</guid><pubDate>Mon, 09 Jan 2017 00:00:00 +0806</pubDate></item><item><title>2017</title><link>/archives/2017/</link><description>&lt;h2&gt;生活&lt;/h2&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 14 May 2020 03:46:24 +0806</lastBuildDate><pubDate>Thu, 14 May 2020 03:46:24 +0806</pubDate><item><title>2017</title><link>/archives/2017/</link><description>&lt;h2&gt;生活&lt;/h2&gt;
 &lt;h3&gt;悲&lt;/h3&gt;
 &lt;p&gt;最爱我的奶奶去世了… 直到现在每次想起奶奶，心里还是难受想哭。快一年了依然无法释怀的一个原因很可能是后悔和遗憾吧。后悔没能多陪陪奶奶，遗憾没能在奶奶还能说话的时候赶回去陪着奶奶。每每想起奶奶去世前痛苦的表情，心里都是一顿阵痛… 唯一欣慰的是在奶奶临走前告诉了奶奶老婆怀孕的消息，临走前少了一桩心事吧。&lt;br&gt;
 如果死亡是通往另一个世界，孙子希望您在那边一切安好…&lt;/p&gt;
@@ -366,4 +282,31 @@ rm -r directory_name
 &lt;span class="nb"&gt;cd&lt;/span&gt; !$ 执行此命令会自动生成命令 
 &lt;span class="nb"&gt;cd&lt;/span&gt; ~/Desktop/html
 &lt;/pre&gt;&lt;/div&gt;
-</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/命令行备忘/</guid><pubDate>Sat, 01 Feb 2020 00:00:00 +0806</pubDate></item></channel></rss>
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/命令行备忘/</guid><pubDate>Sat, 01 Feb 2020 00:00:00 +0806</pubDate></item><item><title>在 Playground 中编译 SwiftUI</title><link>/archives/记录「歌词派」/</link><description>&lt;blockquote&gt;&lt;p&gt;记录下在 Playground 中编译 SwiftUI 的代码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="nc"&gt;SwiftUI&lt;/span&gt;
+&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="nc"&gt;PlaygroundSupport&lt;/span&gt;
+
+&lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;ContentView&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;View&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="n"&gt;State&lt;/span&gt; &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;counter&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;body&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;some&lt;/span&gt; &lt;span class="n"&gt;View&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;VStack&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Tap me!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="n"&gt;tertiarySystemFill&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+                    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cornerRadius&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;})&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;You&amp;#39;ve tapped &lt;/span&gt;&lt;span class="si"&gt;\(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="si"&gt;)&lt;/span&gt;&lt;span class="s"&gt; times&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;You&amp;#39;ve not yet tapped&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;PlaygroundPage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLiveView&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ContentView&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="media/%E6%88%AA%E5%B1%8F2020-05-14%20%E4%B8%8A%E5%8D%8811.43.34.png" /&gt;&lt;figcaption&gt;截屏2020-05-14 上午11.43.34&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/记录「歌词派」/</guid><pubDate>Thu, 14 May 2020 00:00:00 +0806</pubDate></item></channel></rss>
