@@ -1,0 +1,45 @@
+---
+layout: post
+title: 在 Playground 中编译 SwiftUI 
+slug: 记录「歌词派」
+date: 2020/05/14
+status: publish
+author: H。H
+categories: 
+  - iOS
+tags:
+  - iOS
+  - SwiftUI
+excerpt: 
+---
+
+> 记录下在 Playground 中编译 SwiftUI 的代码。
+
+```swift
+import SwiftUI
+import PlaygroundSupport
+
+struct ContentView: View {
+    @State var counter = 0
+    var body: some View {
+        VStack {
+            Button(action: { self.counter += 1 }, label: {
+                Text("Tap me!")
+                    .padding()
+                    .background(Color(.tertiarySystemFill))
+                    .cornerRadius(5)
+            })
+            if counter > 0 {
+                Text("You've tapped \(counter) times")
+            } else {
+                Text("You've not yet tapped")
+            }
+        }
+    }
+}
+
+PlaygroundPage.current.setLiveView(ContentView())
+
+```
+
+![截屏2020-05-14 上午11.43.34](media/%E6%88%AA%E5%B1%8F2020-05-14%20%E4%B8%8A%E5%8D%8811.43.34.png)
