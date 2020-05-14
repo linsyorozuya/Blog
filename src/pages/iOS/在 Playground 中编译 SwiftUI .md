@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在 Playground 中编译 SwiftUI 
-slug: 记录「歌词派」
+slug: 在 Playground 中编译 SwiftUI
 date: 2020/05/14
 status: publish
 author: H。H
