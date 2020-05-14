@@ -42,4 +42,5 @@ PlaygroundPage.current.setLiveView(ContentView())
 
 ```
 
-![截屏2020-05-14 上午11.43.34](media/%E6%88%AA%E5%B1%8F2020-05-14%20%E4%B8%8A%E5%8D%8811.43.34.png)
+![截屏2020-05-14 上午11.43.34](https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-14%20上午11.43.34.png)
+
