@@ -34,14 +34,14 @@ key_words = ['Maverick', 'Galileo', 'blog']
 language = 'zh-CN'
 external_links = [
     {
-        "name": "灰桑",
-        "url": "https://life.linsyorozuya.com",
-        "brief": "灰桑的主页。"
-    },
-    {
         "name": "Maverick",
         "url": "https://github.com/AlanDecode/Maverick",
         "brief": "🏄‍ Go My Own Way."
+    },
+    {
+        "name": "灰桑",
+        "url": "https://life.linsyorozuya.com",
+        "brief": "灰桑的主页。"
     }
 ]
 nav = [
