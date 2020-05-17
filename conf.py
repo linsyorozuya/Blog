@@ -39,9 +39,9 @@ external_links = [
         "brief": "🏄‍ Go My Own Way."
     },
     {
-        "name": "三無計劃",
-        "url": "https://www.imalan.cn",
-        "brief": "熊猫小A的主页。"
+        "name": "灰桑",
+        "url": "https://life.linsyorozuya.com",
+        "brief": "灰桑的主页。"
     }
 ]
 nav = [
