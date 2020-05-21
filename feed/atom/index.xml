@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>Lin's よろづ屋</title><updated>2020-05-17T23:31:12.594598+08:06</updated><author><name>linsyorozuya</name><email>linsyorozuya@yahoo.com</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/logo.png</logo><subtitle>吾性自足，不假外求</subtitle><entry><id>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</id><title>实现 Smartisan OS 中首页的 PageControll 效果</title><updated>2020-05-17T23:31:12.594827+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>Lin's よろづ屋</title><updated>2020-05-21T09:26:58.815299+08:06</updated><author><name>linsyorozuya</name><email>linsyorozuya@yahoo.com</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/logo.png</logo><subtitle>吾性自足，不假外求</subtitle><entry><id>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</id><title>实现 Smartisan OS 中首页的 PageControll 效果</title><updated>2020-05-21T09:26:58.815655+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;锤子的效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 75.38461538461539" &gt;&lt;img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 75.38461538461539" &gt;&lt;img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;首先 kittenyang 实现的，当亮点划过两个暗点的中间是还是显示的&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 80.05319148936171" &gt;&lt;img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/7c62c3c797cc897b929bd28edad5d2f9.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 80.05319148936171" &gt;&lt;img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/7c62c3c797cc897b929bd28edad5d2f9.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;再看视错觉文章里的效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 28.181818181818183" &gt;&lt;img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/e239797e62ada73cf93b3aa124fb9614.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 28.181818181818183" &gt;&lt;img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/e239797e62ada73cf93b3aa124fb9614.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;最终实现的效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 26.956521739130434" &gt;&lt;img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/6441c406e870d24f369ac1a0640b6249.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 26.956521739130434" &gt;&lt;img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/6441c406e870d24f369ac1a0640b6249.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h5&gt;实现原理&lt;/h5&gt;
 &lt;p&gt;首先从效果看锤子的亮点，像是从孔的下方移动。所以给人感觉是上面挖了一排孔，亮点在地道移动所以两个空中间的地方看不到移动的亮点。所以不能直接使用一个 view 移动来解决。&lt;/p&gt;
 &lt;p&gt;恰巧看到另一篇文章，想到也许可以试试。&lt;/p&gt;
@@ -22,11 +22,11 @@
 &lt;/ol&gt;
 &lt;p&gt;3.&lt;code&gt;_hightLightView&lt;/code&gt; 上添加 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 视图，然后在 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 上面添加相应数量的选中状态的圆&lt;code&gt;lightCircle&lt;/code&gt;，注意他们的位置相对于 &lt;code&gt;LHPageControlview&lt;/code&gt; 上的 &lt;code&gt;darkCircle&lt;/code&gt;要一一对应。&lt;/p&gt;
 &lt;p&gt;整个控件结构如下图：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 55.348837209302324" &gt;&lt;img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/038b67a55ab229d521c1a9d16aaada81.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 55.348837209302324" &gt;&lt;img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/038b67a55ab229d521c1a9d16aaada81.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;移动的时候，移动 &lt;code&gt;_hightLightView&lt;/code&gt; 的同时 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 往相反方向移动同样距离，这样在视觉上就好像 &lt;code&gt;_topHidenHightLightCircles&lt;/code&gt; 是静止的，看上去只是 &lt;code&gt;_hightLightView&lt;/code&gt; 在移动。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;这样当 &lt;code&gt;_hightLightView&lt;/code&gt; 移动到选中状态的圆 &lt;code&gt;lightCircle&lt;/code&gt; 时，相应的未选中状态的 &lt;code&gt;darkCircle&lt;/code&gt; 上就像有高亮的圆 &lt;code&gt;lightCircle&lt;/code&gt; 移动过来遮住并显示。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;移动时如图：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 58.99470899470899" &gt;&lt;img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/b292297161f63b1badaae340db59995b.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 58.99470899470899" &gt;&lt;img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/b292297161f63b1badaae340db59995b.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;移动的关键代码：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;CGFloat scale = distance - (int)distance;
@@ -71,7 +71,7 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;p&gt;解决&lt;br&gt;
 还是得自己解决。=。=。最近看到 &lt;code&gt;CGAffineTransform&lt;/code&gt; 这个类，可以直接根据自己的中心点来进行缩放和移动。省去了再去计算在父 view 的坐标去移动。&lt;/p&gt;
 &lt;p&gt;Github 代码：&lt;a href="https://github.com/LinBling/LHPageControlTry"&gt;&lt;code&gt;传送门&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</content><link href="/archives/实现 Smartisan OS 中首页的 PageControll 效果/" rel="alternate"/><published>2016-01-02T00:00:00+08:06</published></entry><entry><id>/archives/iOS 自定义控件适应内容大小问题/</id><title>iOS 自定义控件适应内容大小问题</title><updated>2020-05-17T23:31:12.594808+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;Why: 之前学习封装了下类似标签页的控件但是并不能根据内容大小来变化高度，看了别人的代码学习下自定义控件如何自适应内容大小。做个笔记。&lt;/p&gt;
+</content><link href="/archives/实现 Smartisan OS 中首页的 PageControll 效果/" rel="alternate"/><published>2016-01-02T00:00:00+08:06</published></entry><entry><id>/archives/iOS 自定义控件适应内容大小问题/</id><title>iOS 自定义控件适应内容大小问题</title><updated>2020-05-21T09:26:58.815624+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;Why: 之前学习封装了下类似标签页的控件但是并不能根据内容大小来变化高度，看了别人的代码学习下自定义控件如何自适应内容大小。做个笔记。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;相关链接：&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -120,14 +120,14 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
 &lt;h4&gt;&lt;strong&gt;值得一提&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;在 storybored 或者 xib 中设置视图约束的时候，如果要设定高度变化的话，记得勾选相应的约束 remove at build time 这个选项来保证高度是可以变化的：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 59.72222222222222" &gt;&lt;img width="516" height="432" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/137b515a04215f1560b19264387a71d7.png" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 59.72222222222222" &gt;&lt;img width="516" height="432" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/137b515a04215f1560b19264387a71d7.png" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;或者在下图这个 Instrinsic Size 的属性里设置为 Placeholder，暂时给予视图一个占位的内容大小， 来避免 Xcode报错：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 43.88111888111888" &gt;&lt;img width="502" height="572" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/f00981195aaeb506950f09cd2232d7e1.png" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 43.88111888111888" &gt;&lt;img width="502" height="572" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/f00981195aaeb506950f09cd2232d7e1.png" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h1&gt;what&lt;/h1&gt;
 &lt;p&gt;然后，修改了自己学习封装的类似标签页的控件的代码。让其具有自适应内容的大小：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 27.468581687612208" &gt;&lt;img width="306" height="557" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/8d9e24c78e88a38b8a7c192403256191.gif" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 27.468581687612208" &gt;&lt;img width="306" height="557" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/8d9e24c78e88a38b8a7c192403256191.gif" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/linsyorozuya/LHTagsViewDemo"&gt;Demo 项目地址&lt;/a&gt;&lt;/p&gt;
-</content><link href="/archives/iOS 自定义控件适应内容大小问题/" rel="alternate"/><published>2016-11-08T00:00:00+08:06</published></entry><entry><id>/archives/iOS Widget - 便宜吗 开发问题记录/</id><title>iOS Widget - 便宜吗 开发问题记录</title><updated>2020-05-17T23:31:12.594788+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</content><link href="/archives/iOS 自定义控件适应内容大小问题/" rel="alternate"/><published>2016-11-08T00:00:00+08:06</published></entry><entry><id>/archives/iOS Widget - 便宜吗 开发问题记录/</id><title>iOS Widget - 便宜吗 开发问题记录</title><updated>2020-05-21T09:26:58.815594+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;WHY&lt;/h2&gt;
 &lt;p&gt;很久很久以前…&lt;/p&gt;
 &lt;p&gt;淘宝是有价格变化曲线的，利用曲线可以很大程度上防止商家的虚假促销。但是不知到出于什么原因后来取消了这个功能。&lt;/p&gt;
@@ -149,7 +149,7 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;p&gt;&lt;strong&gt;（开发使用的是 &lt;code&gt;比一比价&lt;/code&gt; 手机端使用的查询接口。由于数据不全，也就没做显示价格曲线的功能了）&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这个 APP 叫&lt;code&gt;便宜吗&lt;/code&gt;，顺便也瞎弄了个图标~&lt;/p&gt;
 &lt;p&gt;看使用效果：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 28.138528138528137" &gt;&lt;img width="260" height="462" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/caa79fa6370afa3313335584b07d5dcf.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 28.138528138528137" &gt;&lt;img width="260" height="462" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/caa79fa6370afa3313335584b07d5dcf.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;官方文档关于 Today Extention 的篇幅不大。基本的要用的方法都讲到，然后再看看其他人的文章就可以开始入手了。（可以参考文章底部引用的两个链接地址。）&lt;/p&gt;
 &lt;p&gt;便宜吗的功能实现上很简单，主要就三个步骤：&lt;/p&gt;
 &lt;ol&gt;
@@ -211,12 +211,12 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;li&gt;&lt;p&gt;&lt;a href="https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/Today.html#//apple_ref/doc/uid/TP40014214-CH11-SW1"&gt;App Extension Programming Guide: Today&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content><link href="/archives/iOS Widget - 便宜吗 开发问题记录/" rel="alternate"/><published>2017-01-09T00:00:00+08:06</published></entry><entry><id>/archives/记录「歌词派」/</id><title>记录「歌词派」</title><updated>2020-05-17T23:31:12.594768+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;终于个人的第二款 App 完成了，但是它却无法上架 App Store。从自己的需求出发而产生的产品，它最终只能服务于自己了。至少它还有我，所有至少写个文章记录下它。&lt;/p&gt;
+</content><link href="/archives/iOS Widget - 便宜吗 开发问题记录/" rel="alternate"/><published>2017-01-09T00:00:00+08:06</published></entry><entry><id>/archives/记录「歌词派」/</id><title>记录「歌词派」</title><updated>2020-05-21T09:26:58.815565+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;终于个人的第二款 App 完成了，但是它却无法上架 App Store。从自己的需求出发而产生的产品，它最终只能服务于自己了。至少它还有我，所有至少写个文章记录下它。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;UI 截图&lt;/h3&gt;
 &lt;p&gt;这几张本来是「歌词派」的 App Store 上的截图。现在上不了 App Store 只能放这里看看咯。（这些应用截图是使用 &lt;a href="https://storescreens.com/?ref=producthunt"&gt;Store Screens&lt;/a&gt; 应用做的，简单易用十分推荐。）&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 66.66666666666667" &gt;&lt;img width="4800" height="3600" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/5a3e7526e58c4f6ab5d48adbd063d2ae.jpeg" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 66.66" &gt;&lt;img width="6666" height="5000" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/d018c017e636464a62f5535b87c2441f.JPG" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 66.66666666666667" &gt;&lt;img width="4800" height="3600" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/5a3e7526e58c4f6ab5d48adbd063d2ae.jpeg" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 66.66" &gt;&lt;img width="6666" height="5000" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/d018c017e636464a62f5535b87c2441f.JPG" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h3&gt;视频&lt;/h3&gt;
 &lt;div class="dplayer"  data-url="http://lyrics-book.linsyorozuya.com/RPReplay_Final1580960741.mp4"&gt;&lt;/div&gt;&lt;h3&gt;为何而生&lt;/h3&gt;
 &lt;p&gt;因为我喜欢听歌和偶尔唱歌，但是我不爱记歌词。而且一般只记得住那些高潮部分的歌词。所以就想做一个搜索、收藏和分享歌词的一个应用。搜了 App Store 没找到符合这个功能的应用，所以就开始自己动手看看能不能做一个。都想好付费模式了。。（后来想想大家怎么都没做应该是审核过不了的关系吧 @。@）&lt;/p&gt;
@@ -229,8 +229,8 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;p&gt;本来以为没有播放音乐，只是展示歌词的话版权方面应该没问题吧。结果歌词也是有版权的，审核马上就被拒绝了。&lt;/p&gt;
 &lt;h3&gt;我还是很喜欢它&lt;/h3&gt;
 &lt;p&gt;虽然不能上架，但是我自己还可以用呗。后面看看要不要删减点功能开源吧。最后分享一张从「歌词派」生成的分享的歌词吧&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 46.99248120300752" &gt;&lt;img width="750" height="798" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/59ee6d6615a498cfd3fb768cb491fe11.jpeg" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/记录「歌词派」/" rel="alternate"/><published>2019-08-12T00:00:00+08:06</published></entry><entry><id>/archives/禁止 Chrome 自动更新 (Mac)/</id><title>禁止 Chrome 自动更新 (Mac)</title><updated>2020-05-17T23:31:12.594747+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;自从把电脑的默认浏览器设置为 Chrome，Clean My Mac 就时不时弹出窗口提示更新程序没响应。再次记录方法。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 46.99248120300752" &gt;&lt;img width="750" height="798" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/59ee6d6615a498cfd3fb768cb491fe11.jpeg" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</content><link href="/archives/记录「歌词派」/" rel="alternate"/><published>2019-08-12T00:00:00+08:06</published></entry><entry><id>/archives/禁止 Chrome 自动更新 (Mac)/</id><title>禁止 Chrome 自动更新 (Mac)</title><updated>2020-05-21T09:26:58.815535+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;自从把电脑的默认浏览器设置为 Chrome，Clean My Mac 就时不时弹出窗口提示更新程序没响应。再次记录方法。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;&lt;a href="https://support.google.com/chrome/a/answer/7591084?hl=zh-Hans"&gt;谷歌官方方法&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;这里拷贝一份&lt;/p&gt;
@@ -257,23 +257,23 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 保存更改。
 此表显示了 UpdateDefault 键的所有有效设置。&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;发现没效果了，发现直接 CleanMyMac 里面禁用扩展好像生效了。。。。。。&lt;/p&gt;
-</content><link href="/archives/禁止 Chrome 自动更新 (Mac)/" rel="alternate"/><published>2019-09-21T00:00:00+08:06</published></entry><entry><id>/archives/让 Xcode 的代码更好看/</id><title>让 Xcode 的代码更好看</title><updated>2020-05-17T23:31:12.594727+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;最近看了一篇 Xcode 编辑器字体颜色优化的文章 &lt;a href="https://medium.com/flawless-app-stories/one-stop-xcode-coziness-ee8dc9c1eb8b"&gt;One-Stop Xcode Coziness&lt;/a&gt;&lt;br&gt;
+</content><link href="/archives/禁止 Chrome 自动更新 (Mac)/" rel="alternate"/><published>2019-09-21T00:00:00+08:06</published></entry><entry><id>/archives/让 Xcode 的代码更好看/</id><title>让 Xcode 的代码更好看</title><updated>2020-05-21T09:26:58.815505+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;最近看了一篇 Xcode 编辑器字体颜色优化的文章 &lt;a href="https://medium.com/flawless-app-stories/one-stop-xcode-coziness-ee8dc9c1eb8b"&gt;One-Stop Xcode Coziness&lt;/a&gt;&lt;br&gt;
 ，感觉效果不错。在此记录记录。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这几年随着不断更新 Xcode 变得更加强大和易用，当然也被越来越多的开发者吐槽它的又胖又慢。但即便大家都在吐槽，但 Xcode 仍然是大部分 iOS 开发者的首选 IDE。&lt;/p&gt;
 &lt;p&gt;作为一个天天低头不见抬头见的代码编辑器，代码的颜色和字体看起来舒不舒服和简洁明了是非常重要的。 Xcode 的主题就是解决这方面需求的功能。你可以自定义类名、函数名、常量等等类型的代码颜色，这样你可以轻松的区分代码的类型以便更好的调试。&lt;/p&gt;
 &lt;p&gt;但是 Xcode 自带的主题一部分没有对相应类型的颜色加以区分，比如我喜欢的主题是 Sunset 这种淡黄色的主题就没有很好的区分一些类型的颜色。之前重装 Xcode 后，我都是直接选择 Sunset 主题，然后字体改为 15 号大小。如下图：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 71.10912343470483" &gt;&lt;img width="1590" height="1118" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/ca7c3baa126a6c2bad029815d839b519.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 71.10912343470483" &gt;&lt;img width="1590" height="1118" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/ca7c3baa126a6c2bad029815d839b519.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h3&gt;优化方案&lt;/h3&gt;
 &lt;p&gt;所谓的优化其实就是替换你觉得更好的字体和优化相关的代码类型颜色。当然除了这个还有上文说的我看的文章里提到的通过编程连字体优化 &lt;strong&gt;逻辑运算符&lt;/strong&gt;。这个我还是第一次知道，孤陋寡闻了。下图字体为 Fira Code 效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 45.32374100719424" &gt;&lt;img width="1764" height="1946" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/912e227bf9128aa1c741dd13b60e2dff.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 45.32374100719424" &gt;&lt;img width="1764" height="1946" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/912e227bf9128aa1c741dd13b60e2dff.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;可以看到想 &amp;gt;= 这种符号就变得很像我们手写的这种符号了。我觉的看起来非常直观，当然每个人感觉不一样。&lt;/p&gt;
 &lt;p&gt;当然也有有很多编程连字字体，从 &lt;a href="https://github.com/tonsky/FiraCode"&gt;Fira Code&lt;/a&gt;， &lt;a href="https://github.com/i-tu/Hasklig"&gt;Hasklig&lt;/a&gt; 等免费字体到 &lt;a href="http://www.fsd.it/fonts/pragmatapro.htm"&gt;PragmataPro&lt;/a&gt; 等付费字体。你可以在 &lt;a href="https://github.com/ProgrammingFonts/ProgrammingFonts"&gt;ProgrammingFonts 上&lt;/a&gt; 浏览这些字体，也可以调整所需的字体，我觉得 Fira Code 挺好看的就使用 Fira Code 了。&lt;/p&gt;
 &lt;p&gt;然后文章作者实现了一个代码颜色和连字字体的 Xcode 主题，&lt;strong&gt;Yolo-theme。&lt;/strong&gt; 你可以在他的 GitHub 上查看 &lt;a href="https://github.com/wendyliga/yolo-theme?source=post_page-----ee8dc9c1eb8b----------------------"&gt;Yolo-theme&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;放置主题文件地址&lt;/h3&gt;
 &lt;p&gt;下载主题后将文件放入 &lt;code&gt;~/Library/Developer/Xcode/UserData/FontAndColorThemes&lt;/code&gt;, 然后重启 Xcode 在设置里选择主题即可。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 79.29883138564274" &gt;&lt;img width="1900" height="1198" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/2b9e8f99475e45326fa0cbbcce57ac8d.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/让 Xcode 的代码更好看/" rel="alternate"/><published>2019-10-02T00:00:00+08:06</published></entry><entry><id>/archives/Git 命令备忘/</id><title>Git 命令备忘</title><updated>2020-05-17T23:31:12.594705+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;笔记用于回顾。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 79.29883138564274" &gt;&lt;img width="1900" height="1198" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/2b9e8f99475e45326fa0cbbcce57ac8d.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</content><link href="/archives/让 Xcode 的代码更好看/" rel="alternate"/><published>2019-10-02T00:00:00+08:06</published></entry><entry><id>/archives/Git 命令备忘/</id><title>Git 命令备忘</title><updated>2020-05-21T09:26:58.815474+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;笔记用于回顾。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;查看当前文件状态&lt;/h3&gt;
 &lt;p&gt;要查看哪些文件处于什么状态，可以用 &lt;code&gt;git status&lt;/code&gt; 命令。&lt;/p&gt;
@@ -299,7 +299,7 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 &lt;p&gt;&lt;code&gt;git stash apply&lt;/code&gt;把之前放到储藏区的最新的那个修改切回来。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git stash list&lt;/code&gt;可以把所有放到储藏区的修改都列出来。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git stash --list&lt;/code&gt; 查看&lt;code&gt;git stash&lt;/code&gt;命令列表。&lt;/p&gt;
-</content><link href="/archives/Git 命令备忘/" rel="alternate"/><published>2020-01-26T00:00:00+08:06</published></entry><entry><id>/archives/命令行备忘/</id><title>命令行备忘</title><updated>2020-05-17T23:31:12.594682+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;用到一个记一个。&lt;/p&gt;
+</content><link href="/archives/Git 命令备忘/" rel="alternate"/><published>2020-01-26T00:00:00+08:06</published></entry><entry><id>/archives/命令行备忘/</id><title>命令行备忘</title><updated>2020-05-21T09:26:58.815437+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;用到一个记一个。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;创建文件&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;创建 helloword.txt 文件
@@ -343,7 +343,7 @@ rm -r directory_name
 &lt;span class="nb"&gt;cd&lt;/span&gt; !$ 执行此命令会自动生成命令 
 &lt;span class="nb"&gt;cd&lt;/span&gt; ~/Desktop/html
 &lt;/pre&gt;&lt;/div&gt;
-</content><link href="/archives/命令行备忘/" rel="alternate"/><published>2020-02-01T00:00:00+08:06</published></entry><entry><id>/archives/在 Playground 中编译 SwiftUI/</id><title>在 Playground 中编译 SwiftUI</title><updated>2020-05-17T23:31:12.594641+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;记录下在 Playground 中编译 SwiftUI 的代码。&lt;/p&gt;
+</content><link href="/archives/命令行备忘/" rel="alternate"/><published>2020-02-01T00:00:00+08:06</published></entry><entry><id>/archives/在 Playground 中编译 SwiftUI/</id><title>在 Playground 中编译 SwiftUI</title><updated>2020-05-21T09:26:58.815373+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;记录下在 Playground 中编译 SwiftUI 的代码。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="nc"&gt;SwiftUI&lt;/span&gt;
 &lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="nc"&gt;PlaygroundSupport&lt;/span&gt;

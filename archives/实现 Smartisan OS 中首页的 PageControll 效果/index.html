@@ -11,15 +11,15 @@
     <meta name="template" content="Galileo" />
     <link rel="alternate" type="application/rss+xml" title="Lin's よろづ屋 &raquo; RSS 2.0" href="/feed/index.xml" />
     <link rel="alternate" type="application/atom+xml" title="Lin's よろづ屋 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/galileo-1c8f2638f2.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/galileo-1c8f2638f2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/katex.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/f140b6a476d34565058151e9130b1d23.json"
+            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/f140b6a476d34565058151e9130b1d23.json"
         }
     </script>
     
@@ -97,13 +97,13 @@
                 <blockquote><p>在看 <a href="http://kittenyang.com/pagecontrol/"><code>kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果</code></a> 和 <a href="http://www.cnblogs.com/ludashi/p/4994520.html"><code>视错觉：从一个看似简单的自定义控件说起</code></a> 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。</p>
 </blockquote>
 <p>锤子的效果：</p>
-<p><figure style="flex: 75.38461538461539" ><img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /></figure></p>
+<p><figure style="flex: 75.38461538461539" ><img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /></figure></p>
 <p>首先 kittenyang 实现的，当亮点划过两个暗点的中间是还是显示的</p>
-<p><figure style="flex: 80.05319148936171" ><img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/7c62c3c797cc897b929bd28edad5d2f9.gif" /></figure></p>
+<p><figure style="flex: 80.05319148936171" ><img width="301" height="188" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/7c62c3c797cc897b929bd28edad5d2f9.gif" /></figure></p>
 <p>再看视错觉文章里的效果：</p>
-<p><figure style="flex: 28.181818181818183" ><img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/e239797e62ada73cf93b3aa124fb9614.gif" /></figure></p>
+<p><figure style="flex: 28.181818181818183" ><img width="279" height="495" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/e239797e62ada73cf93b3aa124fb9614.gif" /></figure></p>
 <p>最终实现的效果：</p>
-<p><figure style="flex: 26.956521739130434" ><img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/6441c406e870d24f369ac1a0640b6249.gif" /></figure></p>
+<p><figure style="flex: 26.956521739130434" ><img width="372" height="690" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/6441c406e870d24f369ac1a0640b6249.gif" /></figure></p>
 <h5>实现原理</h5>
 <p>首先从效果看锤子的亮点，像是从孔的下方移动。所以给人感觉是上面挖了一排孔，亮点在地道移动所以两个空中间的地方看不到移动的亮点。所以不能直接使用一个 view 移动来解决。</p>
 <p>恰巧看到另一篇文章，想到也许可以试试。</p>
@@ -117,11 +117,11 @@
 </ol>
 <p>3.<code>_hightLightView</code> 上添加 <code>_topHidenHightLightCircles</code> 视图，然后在 <code>_topHidenHightLightCircles</code> 上面添加相应数量的选中状态的圆<code>lightCircle</code>，注意他们的位置相对于 <code>LHPageControlview</code> 上的 <code>darkCircle</code>要一一对应。</p>
 <p>整个控件结构如下图：</p>
-<p><figure style="flex: 55.348837209302324" ><img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/038b67a55ab229d521c1a9d16aaada81.png" /></figure></p>
+<p><figure style="flex: 55.348837209302324" ><img width="952" height="860" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/038b67a55ab229d521c1a9d16aaada81.png" /></figure></p>
 <p><strong>移动的时候，移动 <code>_hightLightView</code> 的同时 <code>_topHidenHightLightCircles</code> 往相反方向移动同样距离，这样在视觉上就好像 <code>_topHidenHightLightCircles</code> 是静止的，看上去只是 <code>_hightLightView</code> 在移动。</strong></p>
 <p><strong>这样当 <code>_hightLightView</code> 移动到选中状态的圆 <code>lightCircle</code> 时，相应的未选中状态的 <code>darkCircle</code> 上就像有高亮的圆 <code>lightCircle</code> 移动过来遮住并显示。</strong></p>
 <p>移动时如图：</p>
-<p><figure style="flex: 58.99470899470899" ><img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/archives/assets/b292297161f63b1badaae340db59995b.png" /></figure></p>
+<p><figure style="flex: 58.99470899470899" ><img width="446" height="378" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/b292297161f63b1badaae340db59995b.png" /></figure></p>
 <p>移动的关键代码：</p>
 
 <pre><code>CGFloat scale = distance - (int)distance;
@@ -234,14 +234,14 @@ _topHidenHightLightCircles.layer.affineTransform = transform;</code></pre>
                     <script>
                         var site_build_date = "2020-01-11T12:00+08:00"
                     </script>
-                    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/galileo-dc4baa7cf4.js"></script>
+                    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/galileo-dc4baa7cf4.js"></script>
                 </footer>
             </div>
         </div>
     </div>
 
     <!--katex-->
-    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/katex.min.js"></script>
     <script>
     mathOpts = {
         delimiters: [
@@ -252,10 +252,10 @@ _topHidenHightLightCircles.layer.affineTransform = transform;</code></pre>
         ]
     };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/ExSearch/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/Blog@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
 
     
     </body>
