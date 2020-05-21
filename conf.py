@@ -19,7 +19,7 @@ template = {
 
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "linsyorozuya/Blog@gh-pages"
+    "repo": "linsyorozuya/i-code-log@gh-pages"
 }
 
 # 站点设置
@@ -34,15 +34,16 @@ key_words = ['Maverick', 'Galileo', 'blog']
 language = 'zh-CN'
 external_links = [
     {
-        "name": "Maverick",
-        "url": "https://github.com/AlanDecode/Maverick",
-        "brief": "🏄‍ Go My Own Way."
-    },
-    {
         "name": "灰桑",
         "url": "https://life.linsyorozuya.com",
         "brief": "灰桑的主页。"
+    },
+    {
+        "name": "Maverick",
+        "url": "https://github.com/AlanDecode/Maverick",
+        "brief": "🏄‍ Go My Own Way."
     }
+
 ]
 nav = [
     {
