@@ -11,14 +11,11 @@ tags:
   - 其他
 ---
 
-![辉宝](../media/IMG_1378.jpeg)
+![灰宝](https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/IMG_2500.jpeg)
 
-这里是我的个人博客，通过 GitHub 管理与构建。   
+一个水平不高不低的 iOS 开发者，热爱用代码创造自己小程序的成就感。
 
+希望有机会能让自己做的产品，让更多人喜欢。
 
-## Contact
-
-Email: linsyorozuya@foxmail.com 
-
-
+顺便财富自由最好了。
 
