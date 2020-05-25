@@ -42,7 +42,7 @@ tags:
 
 ### 相关解释
 
-#### ![截屏2020-05-25 下午2.09.29](https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.09.29.png)
+#### ![文件结构](https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.09.29.png)
 
 **Store**: 主要持有了 State 属性和一个接受和处理 Action 的 Reduce 函数。
 
@@ -116,7 +116,7 @@ struct WriteUserAppCommand: AppCommand {
 
 ### 通过 Action 来改变 State
 
-通过向 Store 发送并处理 Action 来改变直接过间接通过 Command 相关状态。
+通过向 Store 发送并处理 Action 来直接修改或间接通过 Command 来修改相关状态。
 
 ### 通过 Binding 双向绑定改变 State
 
@@ -125,7 +125,8 @@ struct WriteUserAppCommand: AppCommand {
 ### 通过 Command 副作用来改变 State
 
 > “Reducer 的唯一职责应该是计算新的 State，而发送请求和接收响应，显然和返回新的 State 没什么关系，它们属于设置状态这一操作的“副作用”。在我们的架构中我们使用 Command 来代表“在设置状态的同时需要触发一些其他操作”这个语境。Reducer 在返回新的 State 的同时，还返回一个代表需要进行何种副作用的 Command 值 (对应上一段中的第一个时间点)。Store 在接收到这个 Command 后，开始进行额外操作，并在操作完成后发送一个新的 Action。这个 Action 中带有异步操作所获取到的数据。它将再次触发 Reducer 并返回新的 State，继而完成异步操作结束时的 UI 更新 (对应上一段中的第二个时间点)。”
->
+
+Store 在接收到这个 Command 后，开始进行额外操作，并在操作完成后发送一个新的 Action。这个 Action 中带有异步操作所获取到的数据。它将再次触发 Reducer 并返回新的 State，继而完成异步操作结束时的 UI 更新 (对应上一段中的第二个时间点)。
 
 ## 用绑定来更新的状态时通过 Publisher 来订阅并处理事件
 
