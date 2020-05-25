@@ -4,7 +4,7 @@ title: SwiftUI - 开发图片模糊的 MAC 小应用
 slug: SwiftUI - 开发图片模糊的 MAC 小应用
 date: 2020/05/23
 status: publish
-author: H。H
+author: 灰桑
 categories: 
   - iOS
 tags:

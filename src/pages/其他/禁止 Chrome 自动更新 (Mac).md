@@ -4,7 +4,7 @@ title: 禁止 Chrome 自动更新 (Mac)
 slug: 禁止 Chrome 自动更新 (Mac)
 date: 2019/09/21
 status: publish
-author: H。H
+author: 灰桑
 tags:
   - 其他
 excerpt: 

@@ -4,7 +4,7 @@ title: 实现 Smartisan OS 中首页的 PageControll 效果
 slug: 实现 Smartisan OS 中首页的 PageControll 效果
 date: 2016/01/02
 status: publish
-author: H。H
+author: 灰桑
 categories: 
   - iOS
 tags:

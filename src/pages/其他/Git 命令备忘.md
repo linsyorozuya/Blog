@@ -4,7 +4,7 @@ title: Git 命令备忘
 slug: Git 命令备忘
 date: 2020/01/26
 status: publish
-author: H。H
+author: 灰桑
 tags:
   - Git
 excerpt: 

@@ -4,7 +4,7 @@ title: 在 Playground 中编译 SwiftUI
 slug: 在 Playground 中编译 SwiftUI
 date: 2020/05/14
 status: publish
-author: H。H
+author: 灰桑
 categories: 
   - iOS
 tags:

@@ -4,7 +4,7 @@ title: iOS Widget - 便宜吗 开发问题记录
 slug: iOS Widget - 便宜吗 开发问题记录
 date: 2017/01/09
 status: publish
-author: H。H
+author: 灰桑
 categories: 
   - iOS
 tags:

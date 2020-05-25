@@ -4,7 +4,7 @@ title: iOS 自定义控件适应内容大小问题
 slug: iOS 自定义控件适应内容大小问题
 date: 2016/11/08
 status: publish
-author: H。H
+author: 灰桑
 categories: 
   - iOS
 tags:

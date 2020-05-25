@@ -4,7 +4,7 @@ title: 关于
 slug: about
 date: 2020/01/11
 status: publish
-author: H.H
+author: 灰桑
 categories: 
   - 其他
 tags: 
