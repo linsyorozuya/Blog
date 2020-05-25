@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>Lin's よろづ屋</title><updated>2020-05-21T09:26:58.815299+08:06</updated><author><name>linsyorozuya</name><email>linsyorozuya@yahoo.com</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/logo.png</logo><subtitle>吾性自足，不假外求</subtitle><entry><id>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</id><title>实现 Smartisan OS 中首页的 PageControll 效果</title><updated>2020-05-21T09:26:58.815655+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>Lin's よろづ屋</title><updated>2020-05-25T07:02:10.760099+08:06</updated><author><name>linsyorozuya</name><email>linsyorozuya@yahoo.com</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/logo.png</logo><subtitle>吾性自足，不假外求</subtitle><entry><id>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</id><title>实现 Smartisan OS 中首页的 PageControll 效果</title><updated>2020-05-25T07:02:10.760680+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;锤子的效果：&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 75.38461538461539" &gt;&lt;img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -71,7 +71,7 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;p&gt;解决&lt;br&gt;
 还是得自己解决。=。=。最近看到 &lt;code&gt;CGAffineTransform&lt;/code&gt; 这个类，可以直接根据自己的中心点来进行缩放和移动。省去了再去计算在父 view 的坐标去移动。&lt;/p&gt;
 &lt;p&gt;Github 代码：&lt;a href="https://github.com/LinBling/LHPageControlTry"&gt;&lt;code&gt;传送门&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</content><link href="/archives/实现 Smartisan OS 中首页的 PageControll 效果/" rel="alternate"/><published>2016-01-02T00:00:00+08:06</published></entry><entry><id>/archives/iOS 自定义控件适应内容大小问题/</id><title>iOS 自定义控件适应内容大小问题</title><updated>2020-05-21T09:26:58.815624+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;Why: 之前学习封装了下类似标签页的控件但是并不能根据内容大小来变化高度，看了别人的代码学习下自定义控件如何自适应内容大小。做个笔记。&lt;/p&gt;
+</content><link href="/archives/实现 Smartisan OS 中首页的 PageControll 效果/" rel="alternate"/><published>2016-01-02T00:00:00+08:06</published></entry><entry><id>/archives/iOS 自定义控件适应内容大小问题/</id><title>iOS 自定义控件适应内容大小问题</title><updated>2020-05-25T07:02:10.760632+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;Why: 之前学习封装了下类似标签页的控件但是并不能根据内容大小来变化高度，看了别人的代码学习下自定义控件如何自适应内容大小。做个笔记。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;相关链接：&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -127,7 +127,7 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;p&gt;然后，修改了自己学习封装的类似标签页的控件的代码。让其具有自适应内容的大小：&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 27.468581687612208" &gt;&lt;img width="306" height="557" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/8d9e24c78e88a38b8a7c192403256191.gif" /&gt;&lt;figcaption&gt;Untitled Image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/linsyorozuya/LHTagsViewDemo"&gt;Demo 项目地址&lt;/a&gt;&lt;/p&gt;
-</content><link href="/archives/iOS 自定义控件适应内容大小问题/" rel="alternate"/><published>2016-11-08T00:00:00+08:06</published></entry><entry><id>/archives/iOS Widget - 便宜吗 开发问题记录/</id><title>iOS Widget - 便宜吗 开发问题记录</title><updated>2020-05-21T09:26:58.815594+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</content><link href="/archives/iOS 自定义控件适应内容大小问题/" rel="alternate"/><published>2016-11-08T00:00:00+08:06</published></entry><entry><id>/archives/iOS Widget - 便宜吗 开发问题记录/</id><title>iOS Widget - 便宜吗 开发问题记录</title><updated>2020-05-25T07:02:10.760584+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;p&gt;&lt;figure style="flex: 115.94202898550725" &gt;&lt;img width="480" height="207" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/842e151742401545fcebcb4a9cf219ce.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;WHY&lt;/h2&gt;
 &lt;p&gt;很久很久以前…&lt;/p&gt;
 &lt;p&gt;淘宝是有价格变化曲线的，利用曲线可以很大程度上防止商家的虚假促销。但是不知到出于什么原因后来取消了这个功能。&lt;/p&gt;
@@ -211,7 +211,7 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;li&gt;&lt;p&gt;&lt;a href="https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/Today.html#//apple_ref/doc/uid/TP40014214-CH11-SW1"&gt;App Extension Programming Guide: Today&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content><link href="/archives/iOS Widget - 便宜吗 开发问题记录/" rel="alternate"/><published>2017-01-09T00:00:00+08:06</published></entry><entry><id>/archives/记录「歌词派」/</id><title>记录「歌词派」</title><updated>2020-05-21T09:26:58.815565+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;终于个人的第二款 App 完成了，但是它却无法上架 App Store。从自己的需求出发而产生的产品，它最终只能服务于自己了。至少它还有我，所有至少写个文章记录下它。&lt;/p&gt;
+</content><link href="/archives/iOS Widget - 便宜吗 开发问题记录/" rel="alternate"/><published>2017-01-09T00:00:00+08:06</published></entry><entry><id>/archives/记录「歌词派」/</id><title>记录「歌词派」</title><updated>2020-05-25T07:02:10.760534+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;终于个人的第二款 App 完成了，但是它却无法上架 App Store。从自己的需求出发而产生的产品，它最终只能服务于自己了。至少它还有我，所有至少写个文章记录下它。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;UI 截图&lt;/h3&gt;
 &lt;p&gt;这几张本来是「歌词派」的 App Store 上的截图。现在上不了 App Store 只能放这里看看咯。（这些应用截图是使用 &lt;a href="https://storescreens.com/?ref=producthunt"&gt;Store Screens&lt;/a&gt; 应用做的，简单易用十分推荐。）&lt;/p&gt;
@@ -230,7 +230,7 @@ _topHidenHightLightCircles.layer.affineTransform = transform;&lt;/code&gt;&lt;/p
 &lt;h3&gt;我还是很喜欢它&lt;/h3&gt;
 &lt;p&gt;虽然不能上架，但是我自己还可以用呗。后面看看要不要删减点功能开源吧。最后分享一张从「歌词派」生成的分享的歌词吧&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 46.99248120300752" &gt;&lt;img width="750" height="798" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/59ee6d6615a498cfd3fb768cb491fe11.jpeg" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/记录「歌词派」/" rel="alternate"/><published>2019-08-12T00:00:00+08:06</published></entry><entry><id>/archives/禁止 Chrome 自动更新 (Mac)/</id><title>禁止 Chrome 自动更新 (Mac)</title><updated>2020-05-21T09:26:58.815535+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;自从把电脑的默认浏览器设置为 Chrome，Clean My Mac 就时不时弹出窗口提示更新程序没响应。再次记录方法。&lt;/p&gt;
+</content><link href="/archives/记录「歌词派」/" rel="alternate"/><published>2019-08-12T00:00:00+08:06</published></entry><entry><id>/archives/禁止 Chrome 自动更新 (Mac)/</id><title>禁止 Chrome 自动更新 (Mac)</title><updated>2020-05-25T07:02:10.760502+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;自从把电脑的默认浏览器设置为 Chrome，Clean My Mac 就时不时弹出窗口提示更新程序没响应。再次记录方法。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;&lt;a href="https://support.google.com/chrome/a/answer/7591084?hl=zh-Hans"&gt;谷歌官方方法&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;这里拷贝一份&lt;/p&gt;
@@ -257,7 +257,7 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 保存更改。
 此表显示了 UpdateDefault 键的所有有效设置。&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;发现没效果了，发现直接 CleanMyMac 里面禁用扩展好像生效了。。。。。。&lt;/p&gt;
-</content><link href="/archives/禁止 Chrome 自动更新 (Mac)/" rel="alternate"/><published>2019-09-21T00:00:00+08:06</published></entry><entry><id>/archives/让 Xcode 的代码更好看/</id><title>让 Xcode 的代码更好看</title><updated>2020-05-21T09:26:58.815505+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;最近看了一篇 Xcode 编辑器字体颜色优化的文章 &lt;a href="https://medium.com/flawless-app-stories/one-stop-xcode-coziness-ee8dc9c1eb8b"&gt;One-Stop Xcode Coziness&lt;/a&gt;&lt;br&gt;
+</content><link href="/archives/禁止 Chrome 自动更新 (Mac)/" rel="alternate"/><published>2019-09-21T00:00:00+08:06</published></entry><entry><id>/archives/让 Xcode 的代码更好看/</id><title>让 Xcode 的代码更好看</title><updated>2020-05-25T07:02:10.760453+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;最近看了一篇 Xcode 编辑器字体颜色优化的文章 &lt;a href="https://medium.com/flawless-app-stories/one-stop-xcode-coziness-ee8dc9c1eb8b"&gt;One-Stop Xcode Coziness&lt;/a&gt;&lt;br&gt;
 ，感觉效果不错。在此记录记录。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这几年随着不断更新 Xcode 变得更加强大和易用，当然也被越来越多的开发者吐槽它的又胖又慢。但即便大家都在吐槽，但 Xcode 仍然是大部分 iOS 开发者的首选 IDE。&lt;/p&gt;
@@ -273,7 +273,7 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 &lt;h3&gt;放置主题文件地址&lt;/h3&gt;
 &lt;p&gt;下载主题后将文件放入 &lt;code&gt;~/Library/Developer/Xcode/UserData/FontAndColorThemes&lt;/code&gt;, 然后重启 Xcode 在设置里选择主题即可。&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 79.29883138564274" &gt;&lt;img width="1900" height="1198" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/2b9e8f99475e45326fa0cbbcce57ac8d.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/让 Xcode 的代码更好看/" rel="alternate"/><published>2019-10-02T00:00:00+08:06</published></entry><entry><id>/archives/Git 命令备忘/</id><title>Git 命令备忘</title><updated>2020-05-21T09:26:58.815474+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;笔记用于回顾。&lt;/p&gt;
+</content><link href="/archives/让 Xcode 的代码更好看/" rel="alternate"/><published>2019-10-02T00:00:00+08:06</published></entry><entry><id>/archives/Git 命令备忘/</id><title>Git 命令备忘</title><updated>2020-05-25T07:02:10.760398+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;笔记用于回顾。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;查看当前文件状态&lt;/h3&gt;
 &lt;p&gt;要查看哪些文件处于什么状态，可以用 &lt;code&gt;git status&lt;/code&gt; 命令。&lt;/p&gt;
@@ -299,7 +299,7 @@ com.google.Keystone.plist 文件地址在 /Library/LaunchAgents
 &lt;p&gt;&lt;code&gt;git stash apply&lt;/code&gt;把之前放到储藏区的最新的那个修改切回来。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git stash list&lt;/code&gt;可以把所有放到储藏区的修改都列出来。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git stash --list&lt;/code&gt; 查看&lt;code&gt;git stash&lt;/code&gt;命令列表。&lt;/p&gt;
-</content><link href="/archives/Git 命令备忘/" rel="alternate"/><published>2020-01-26T00:00:00+08:06</published></entry><entry><id>/archives/命令行备忘/</id><title>命令行备忘</title><updated>2020-05-21T09:26:58.815437+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;用到一个记一个。&lt;/p&gt;
+</content><link href="/archives/Git 命令备忘/" rel="alternate"/><published>2020-01-26T00:00:00+08:06</published></entry><entry><id>/archives/命令行备忘/</id><title>命令行备忘</title><updated>2020-05-25T07:02:10.760366+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;用到一个记一个。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;创建文件&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;创建 helloword.txt 文件
@@ -343,7 +343,7 @@ rm -r directory_name
 &lt;span class="nb"&gt;cd&lt;/span&gt; !$ 执行此命令会自动生成命令 
 &lt;span class="nb"&gt;cd&lt;/span&gt; ~/Desktop/html
 &lt;/pre&gt;&lt;/div&gt;
-</content><link href="/archives/命令行备忘/" rel="alternate"/><published>2020-02-01T00:00:00+08:06</published></entry><entry><id>/archives/在 Playground 中编译 SwiftUI/</id><title>在 Playground 中编译 SwiftUI</title><updated>2020-05-21T09:26:58.815373+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;记录下在 Playground 中编译 SwiftUI 的代码。&lt;/p&gt;
+</content><link href="/archives/命令行备忘/" rel="alternate"/><published>2020-02-01T00:00:00+08:06</published></entry><entry><id>/archives/在 Playground 中编译 SwiftUI/</id><title>在 Playground 中编译 SwiftUI</title><updated>2020-05-25T07:02:10.760329+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;记录下在 Playground 中编译 SwiftUI 的代码。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="nc"&gt;SwiftUI&lt;/span&gt;
 &lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="nc"&gt;PlaygroundSupport&lt;/span&gt;
@@ -370,4 +370,100 @@ rm -r directory_name
 &lt;span class="n"&gt;PlaygroundPage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLiveView&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ContentView&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-14%20上午11.43.34.png" /&gt;&lt;figcaption&gt;截屏2020-05-14 上午11.43.34&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/在 Playground 中编译 SwiftUI/" rel="alternate"/><published>2020-05-14T00:00:00+08:06</published></entry></feed>
+</content><link href="/archives/在 Playground 中编译 SwiftUI/" rel="alternate"/><published>2020-05-14T00:00:00+08:06</published></entry><entry><id>/archives/SwiftUI - 开发图片模糊的 MAC 小应用/</id><title>SwiftUI - 开发图片模糊的 MAC 小应用</title><updated>2020-05-25T07:02:10.760228+00:00</updated><author><name>H。H</name><email>linsyorozuya@yahoo.com</email><uri>https://code.linsyorozuya.com</uri></author><content>&lt;blockquote&gt;&lt;p&gt;看完喵神的 《 SwiftUI 与 编程思想》，尝试使用了书中类 Redux 的架构写了给图片添加模糊和修改饱和度的 MAC 上的小应用。文章记录一些其中的要点，文章部分引用了书中的段落来记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;🌠成果&lt;/h2&gt;
+&lt;p&gt;&lt;figure style="flex: 72.19101123595506" &gt;&lt;img width="2056" height="1424" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/2020-05-25%2000-30-47.2020-05-25%2000_34_42.gif" /&gt;&lt;figcaption&gt;演示.gif&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;应用功能很简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可以拖动图片到应用中&lt;/li&gt;
+&lt;li&gt;调节模糊程度&lt;/li&gt;
+&lt;li&gt;调节饱和度&lt;/li&gt;
+&lt;li&gt;拖动图片到其他软件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;架构&lt;/h2&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.21.32.png" /&gt;&lt;figcaption&gt;图&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;数据流动方式的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;将 app 当作一个状态机，状态决定用户界面。&lt;/li&gt;
+&lt;li&gt;这些状态都保存在一个 Store 对象中。&lt;/li&gt;
+&lt;li&gt;View 不能直接操作 State，而只能通过发送 Action 的方式，间接改变存储在 Store 中的 State。&lt;/li&gt;
+&lt;li&gt;Reducer 接受原有的 State 和发送过来的 Action，生成新的 State 。并返回执行相关额外操作的副作用 Command。&lt;/li&gt;
+&lt;li&gt;Store 接受并执行副作用 Command （网络操作、文件操作等与状态变更无关的操作）来继而发送新的 Action 再次触发 Reducer 返回新的 State。&lt;/li&gt;
+&lt;li&gt;用新的 State 替换 Store 中原有的状态，并用新状态来驱动更新界面。&lt;/li&gt;
+&lt;li&gt;使用 Binding 来完成界面和状态的双向绑定。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用这种架构的优势将 View 中的状态操作完全解耦到了 Store 上去操作，所以对 State 的状态修改得以集中到了一个地方去处理。对项目的阅读和维护都有很好的帮助。避免了项目复杂之后散落各处的状态修改。&lt;/p&gt;
+&lt;h3&gt;相关解释&lt;/h3&gt;
+&lt;h4&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.09.29.png" /&gt;&lt;figcaption&gt;截屏2020-05-25 下午2.09.29&lt;/figcaption&gt;&lt;/figure&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Store&lt;/strong&gt;: 主要持有了 State 属性和一个接受和处理 Action 的 Reduce 函数。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ObservableObject&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="n"&gt;Published&lt;/span&gt; &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;appState&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AppState&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppAction&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AppState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AppCommand&lt;/span&gt;&lt;span class="p"&gt;?)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;appState&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;appCommond&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppCommand&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt;
+
+        &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;something&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+        &lt;span class="p"&gt;....&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;appState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;appCommond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;_&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppAction&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="cp"&gt;#if&lt;/span&gt; &lt;span class="cp"&gt;DEBUG&lt;/span&gt;
+        &lt;span class="bp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Action: &lt;/span&gt;&lt;span class="si"&gt;\(&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="si"&gt;)&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+        &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="bp"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;appState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;appState&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;command&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="cp"&gt;#if&lt;/span&gt; &lt;span class="cp"&gt;DEBUG&lt;/span&gt;
+            &lt;span class="bp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;AppCommand:&lt;/span&gt;&lt;span class="si"&gt;\(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="si"&gt;)&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+            &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;State&lt;/strong&gt;: 存放相关状态的位置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Action&lt;/strong&gt;：一个定义相关操作的枚举&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;enum&lt;/span&gt; &lt;span class="nc"&gt;AppAction&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;something&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Command&lt;/strong&gt;：执行相关副作用操作的地方&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;protocol&lt;/span&gt; &lt;span class="nc"&gt;AppCommand&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;store&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;WriteUserAppCommand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppCommand&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;
+
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;store&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="n"&gt;FileHelper&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;writeJSON&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;documentDirectory&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fileName&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;user.json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;三种改变 State 的途径&lt;/h2&gt;
+&lt;p&gt;更准确的应该是两种，Command 的方式最终也是通过 Action 来处理相关状态改变。&lt;/p&gt;
+&lt;h3&gt;通过 Action 来改变 State&lt;/h3&gt;
+&lt;p&gt;通过向 Store 发送并处理 Action 来改变直接过间接通过 Command 相关状态。&lt;/p&gt;
+&lt;h3&gt;通过 Binding 双向绑定改变 State&lt;/h3&gt;
+&lt;p&gt;利用 SwiftUI 的双向绑定的特性，可以直接把 State 和 View 绑定起来。当 View 的状态改变直接修改了 Store 中的原始状态。&lt;/p&gt;
+&lt;h3&gt;通过 Command 副作用来改变 State&lt;/h3&gt;
+&lt;blockquote&gt;&lt;p&gt;“Reducer 的唯一职责应该是计算新的 State，而发送请求和接收响应，显然和返回新的 State 没什么关系，它们属于设置状态这一操作的“副作用”。在我们的架构中我们使用 Command 来代表“在设置状态的同时需要触发一些其他操作”这个语境。Reducer 在返回新的 State 的同时，还返回一个代表需要进行何种副作用的 Command 值 (对应上一段中的第一个时间点)。Store 在接收到这个 Command 后，开始进行额外操作，并在操作完成后发送一个新的 Action。这个 Action 中带有异步操作所获取到的数据。它将再次触发 Reducer 并返回新的 State，继而完成异步操作结束时的 UI 更新 (对应上一段中的第二个时间点)。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;用绑定来更新的状态时通过 Publisher 来订阅并处理事件&lt;/h2&gt;
+&lt;p&gt;对于通过 Action 改变的状态，如果我们想要执行网络请求这样的副作用，可以通过同时返回合适的 Command 完成。但是对于通过绑定来更新的状态，由于不会经过 Store 的 reducer 来处理状态并返回 Command，我们缺少一种有效的手段来在它们改变时执行副作用。&lt;/p&gt;
+&lt;p&gt;在 SwiftUI 中可以使用 combine 来解决这个问题。最简单的方法是在属性前加上 @Published 来为相关属性创建 Publisher 。然后在合适的位置订阅相关事件来执行额外的操作。&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;通过这个架构体验到了 SwiftUI 开发数据驱动页面更新的便利和优势，而且 SwiftUI 还能用来开发 Mac 端的应用。虽然目前 SwiftUI 还在开始不成熟的阶段，但是有理由相信以后 SwiftUI 统一苹果全平台的时候。期待下个月的 WWDC 的 SwiftUI。&lt;/p&gt;
+</content><link href="/archives/SwiftUI - 开发图片模糊的 MAC 小应用/" rel="alternate"/><published>2020-05-23T00:00:00+08:06</published></entry></feed>

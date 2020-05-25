@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Maverick,Galileo,blog" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="Lin's よろづ屋 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Lin's よろづ屋 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/galileo-1c8f2638f2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/5d7792bd5f5d5060f8ff364cbe2bbbcc.json"
+        }
+    </script>
+    
+<title>SwiftUI - 开发图片模糊的 MAC 小应用 - Lin's よろづ屋</title>
+<meta name="author" content="H。H" />
+<meta name="description" content="看完喵神的 《 SwiftUI 与 编程思想》，尝试使用了书中类 Redux 的架构写了给图片添加模糊和修改饱和度的 MAC 上的小应用。文章记录一些其中的要点，文章部分引用了书中的段落来记录。" />
+<meta property="og:title" content="SwiftUI - 开发图片模糊的 MAC 小应用 - Lin's よろづ屋" />
+<meta property="og:description" content="看完喵神的 《 SwiftUI 与 编程思想》，尝试使用了书中类 Redux 的架构写了给图片添加模糊和修改饱和度的 MAC 上的小应用。文章记录一些其中的要点，文章部分引用了书中的段落来记录。" />
+<meta property="og:site_name" content="Lin's よろづ屋" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/SwiftUI - 开发图片模糊的 MAC 小应用/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-05-23T00:00:00-00.00" />
+<meta name="twitter:title" content="SwiftUI - 开发图片模糊的 MAC 小应用 - Lin's よろづ屋" />
+<meta name="twitter:description" content="看完喵神的 《 SwiftUI 与 编程思想》，尝试使用了书中类 Redux 的架构写了给图片添加模糊和修改饱和度的 MAC 上的小应用。文章记录一些其中的要点，文章部分引用了书中的段落来记录。" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83202512-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-83202512-2');
+</script>
+
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">Lin's よろづ屋</a></h1>
+                        <p>吾性自足，不假外求</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">SwiftUI - 开发图片模糊的 MAC 小应用</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>H。H</span>
+                <time>
+                    2020-05-23
+                </time>
+                
+                in <a no-style class="category" href="/category/iOS/">
+                    iOS
+                </a>
+                
+                
+                <span class="leancloud_visitors" 
+                    id="/archives/SwiftUI - 开发图片模糊的 MAC 小应用/" 
+                    data-flag-title="SwiftUI - 开发图片模糊的 MAC 小应用"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
+            </span>
+            <div class="ga-content_body">
+                <blockquote><p>看完喵神的 《 SwiftUI 与 编程思想》，尝试使用了书中类 Redux 的架构写了给图片添加模糊和修改饱和度的 MAC 上的小应用。文章记录一些其中的要点，文章部分引用了书中的段落来记录。</p>
+</blockquote>
+<h2>🌠成果</h2>
+<p><figure style="flex: 72.19101123595506" ><img width="2056" height="1424" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/2020-05-25%2000-30-47.2020-05-25%2000_34_42.gif" /><figcaption>演示.gif</figcaption></figure></p>
+<p>应用功能很简单：</p>
+<ol>
+<li>可以拖动图片到应用中</li>
+<li>调节模糊程度</li>
+<li>调节饱和度</li>
+<li>拖动图片到其他软件</li>
+</ol>
+<h2>架构</h2>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.21.32.png" /><figcaption>图</figcaption></figure></p>
+<h3>数据流动方式的特点</h3>
+<ol>
+<li>将 app 当作一个状态机，状态决定用户界面。</li>
+<li>这些状态都保存在一个 Store 对象中。</li>
+<li>View 不能直接操作 State，而只能通过发送 Action 的方式，间接改变存储在 Store 中的 State。</li>
+<li>Reducer 接受原有的 State 和发送过来的 Action，生成新的 State 。并返回执行相关额外操作的副作用 Command。</li>
+<li>Store 接受并执行副作用 Command （网络操作、文件操作等与状态变更无关的操作）来继而发送新的 Action 再次触发 Reducer 返回新的 State。</li>
+<li>用新的 State 替换 Store 中原有的状态，并用新状态来驱动更新界面。</li>
+<li>使用 Binding 来完成界面和状态的双向绑定。</li>
+</ol>
+<p>使用这种架构的优势将 View 中的状态操作完全解耦到了 Store 上去操作，所以对 State 的状态修改得以集中到了一个地方去处理。对项目的阅读和维护都有很好的帮助。避免了项目复杂之后散落各处的状态修改。</p>
+<h3>相关解释</h3>
+<h4><figure  size-undefined><img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.09.29.png" /><figcaption>截屏2020-05-25 下午2.09.29</figcaption></figure></h4>
+<p><strong>Store</strong>: 主要持有了 State 属性和一个接受和处理 Action 的 Reduce 函数。</p>
+<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Store</span><span class="p">:</span> <span class="n">ObservableObject</span> <span class="p">{</span>
+
+        <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">appState</span> <span class="p">=</span> <span class="n">AppState</span><span class="p">()</span>
+
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reduce</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">AppState</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">AppAction</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="n">AppState</span><span class="p">,</span> <span class="n">AppCommand</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nv">appState</span> <span class="p">=</span> <span class="n">state</span>
+        <span class="kd">var</span> <span class="nv">appCommond</span><span class="p">:</span> <span class="n">AppCommand</span><span class="p">?</span>
+
+        <span class="k">switch</span> <span class="n">action</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="p">.</span><span class="n">action</span><span class="p">(</span><span class="kd">let</span> <span class="nv">something</span><span class="p">):</span>
+
+        <span class="p">....</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">appState</span><span class="p">,</span><span class="n">appCommond</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">dispatch</span><span class="p">(</span><span class="kc">_</span> <span class="n">action</span><span class="p">:</span> <span class="n">AppAction</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cp">#if</span> <span class="cp">DEBUG</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Action: </span><span class="si">\(</span><span class="n">action</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+        <span class="cp">#endif</span>
+
+        <span class="kd">let</span> <span class="nv">result</span> <span class="p">=</span> <span class="n">Store</span><span class="p">.</span><span class="bp">reduce</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">appState</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">action</span><span class="p">)</span>
+        <span class="n">appState</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="mi">0</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">command</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="mi">1</span><span class="p">{</span>
+            <span class="cp">#if</span> <span class="cp">DEBUG</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;AppCommand:</span><span class="si">\(</span><span class="n">command</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+            <span class="cp">#endif</span>
+
+            <span class="n">command</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="kc">self</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p><strong>State</strong>: 存放相关状态的位置。</p>
+<p><strong>Action</strong>：一个定义相关操作的枚举</p>
+<div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">AppAction</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="p">.</span><span class="n">action</span><span class="p">(</span><span class="n">something</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+<p><strong>Command</strong>：执行相关副作用操作的地方</p>
+<div class="highlight"><pre><span></span><span class="kd">protocol</span> <span class="nc">AppCommand</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="k">in</span> <span class="n">store</span><span class="p">:</span> <span class="n">Store</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="nc">WriteUserAppCommand</span><span class="p">:</span> <span class="n">AppCommand</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">user</span><span class="p">:</span> <span class="n">User</span>
+
+    <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="k">in</span> <span class="n">store</span><span class="p">:</span> <span class="n">Store</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span><span class="p">?</span> <span class="n">FileHelper</span><span class="p">.</span><span class="n">writeJSON</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">to</span><span class="p">:</span> <span class="p">.</span><span class="n">documentDirectory</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="s">&quot;user.json&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+<h2>三种改变 State 的途径</h2>
+<p>更准确的应该是两种，Command 的方式最终也是通过 Action 来处理相关状态改变。</p>
+<h3>通过 Action 来改变 State</h3>
+<p>通过向 Store 发送并处理 Action 来改变直接过间接通过 Command 相关状态。</p>
+<h3>通过 Binding 双向绑定改变 State</h3>
+<p>利用 SwiftUI 的双向绑定的特性，可以直接把 State 和 View 绑定起来。当 View 的状态改变直接修改了 Store 中的原始状态。</p>
+<h3>通过 Command 副作用来改变 State</h3>
+<blockquote><p>“Reducer 的唯一职责应该是计算新的 State，而发送请求和接收响应，显然和返回新的 State 没什么关系，它们属于设置状态这一操作的“副作用”。在我们的架构中我们使用 Command 来代表“在设置状态的同时需要触发一些其他操作”这个语境。Reducer 在返回新的 State 的同时，还返回一个代表需要进行何种副作用的 Command 值 (对应上一段中的第一个时间点)。Store 在接收到这个 Command 后，开始进行额外操作，并在操作完成后发送一个新的 Action。这个 Action 中带有异步操作所获取到的数据。它将再次触发 Reducer 并返回新的 State，继而完成异步操作结束时的 UI 更新 (对应上一段中的第二个时间点)。”</p>
+</blockquote>
+<h2>用绑定来更新的状态时通过 Publisher 来订阅并处理事件</h2>
+<p>对于通过 Action 改变的状态，如果我们想要执行网络请求这样的副作用，可以通过同时返回合适的 Command 完成。但是对于通过绑定来更新的状态，由于不会经过 Store 的 reducer 来处理状态并返回 Command，我们缺少一种有效的手段来在它们改变时执行副作用。</p>
+<p>在 SwiftUI 中可以使用 combine 来解决这个问题。最简单的方法是在属性前加上 @Published 来为相关属性创建 Publisher 。然后在合适的位置订阅相关事件来执行额外的操作。</p>
+<h2>总结</h2>
+<p>通过这个架构体验到了 SwiftUI 开发数据驱动页面更新的便利和优势，而且 SwiftUI 还能用来开发 Mac 端的应用。虽然目前 SwiftUI 还在开始不成熟的阶段，但是有理由相信以后 SwiftUI 统一苹果全平台的时候。期待下个月的 WWDC 的 SwiftUI。</p>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/iOS/">#iOS</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>没有了</h3>
+        <p class="yue">这是最新的文章</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/在 Playground 中编译 SwiftUI/">在 Playground 中编译 SwiftUI</a>
+        <p class="yue">记录下在 Playground 中编译 SwiftUI 的代码。</p>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "eMmVkL0FDqrmunWuz9m5sBGn-gzGzoHsz", "appKey": "RsDa5XAzjj8cWQLigV7YezRM", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">Lin's よろづ屋</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2020 linsyorozuya</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/linsyorozuya" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/linsyorozuya" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="https://weibo.com/2630651323/" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2020-01-11T12:00+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/galileo-dc4baa7cf4.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 21 May 2020 09:26:58 +0806</lastBuildDate><pubDate>Thu, 21 May 2020 09:26:58 +0806</pubDate><item><title>实现 Smartisan OS 中首页的 PageControll 效果</title><link>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</link><description>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Lin's よろづ屋</title><link>/</link><description>吾性自足，不假外求</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/logo.png</url><title>Lin's よろづ屋</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Mon, 25 May 2020 07:02:10 +0806</lastBuildDate><pubDate>Mon, 25 May 2020 07:02:10 +0806</pubDate><item><title>实现 Smartisan OS 中首页的 PageControll 效果</title><link>/archives/实现 Smartisan OS 中首页的 PageControll 效果/</link><description>&lt;blockquote&gt;&lt;p&gt;在看 &lt;a href="http://kittenyang.com/pagecontrol/"&gt;&lt;code&gt;kittenyang:在iOS中实现Smartisan OS中首页的PageControll效果&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="http://www.cnblogs.com/ludashi/p/4994520.html"&gt;&lt;code&gt;视错觉：从一个看似简单的自定义控件说起&lt;/code&gt;&lt;/a&gt; 这两篇文章感觉可以更好的实现实现 Smartisan OS 中首页的 PageControl 效果。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;锤子的效果：&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 75.38461538461539" &gt;&lt;img width="294" height="195" src="https://cdn.jsdelivr.net/gh/linsyorozuya/i-code-log@gh-pages/archives/assets/4cb12df20f3aa413ff375ff8640f7a9f.gif" /&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -370,4 +370,100 @@ rm -r directory_name
 &lt;span class="n"&gt;PlaygroundPage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLiveView&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ContentView&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-14%20上午11.43.34.png" /&gt;&lt;figcaption&gt;截屏2020-05-14 上午11.43.34&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/在 Playground 中编译 SwiftUI/</guid><pubDate>Thu, 14 May 2020 00:00:00 +0806</pubDate></item></channel></rss>
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/在 Playground 中编译 SwiftUI/</guid><pubDate>Thu, 14 May 2020 00:00:00 +0806</pubDate></item><item><title>SwiftUI - 开发图片模糊的 MAC 小应用</title><link>/archives/SwiftUI - 开发图片模糊的 MAC 小应用/</link><description>&lt;blockquote&gt;&lt;p&gt;看完喵神的 《 SwiftUI 与 编程思想》，尝试使用了书中类 Redux 的架构写了给图片添加模糊和修改饱和度的 MAC 上的小应用。文章记录一些其中的要点，文章部分引用了书中的段落来记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;🌠成果&lt;/h2&gt;
+&lt;p&gt;&lt;figure style="flex: 72.19101123595506" &gt;&lt;img width="2056" height="1424" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/2020-05-25%2000-30-47.2020-05-25%2000_34_42.gif" /&gt;&lt;figcaption&gt;演示.gif&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;应用功能很简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可以拖动图片到应用中&lt;/li&gt;
+&lt;li&gt;调节模糊程度&lt;/li&gt;
+&lt;li&gt;调节饱和度&lt;/li&gt;
+&lt;li&gt;拖动图片到其他软件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;架构&lt;/h2&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.21.32.png" /&gt;&lt;figcaption&gt;图&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;数据流动方式的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;将 app 当作一个状态机，状态决定用户界面。&lt;/li&gt;
+&lt;li&gt;这些状态都保存在一个 Store 对象中。&lt;/li&gt;
+&lt;li&gt;View 不能直接操作 State，而只能通过发送 Action 的方式，间接改变存储在 Store 中的 State。&lt;/li&gt;
+&lt;li&gt;Reducer 接受原有的 State 和发送过来的 Action，生成新的 State 。并返回执行相关额外操作的副作用 Command。&lt;/li&gt;
+&lt;li&gt;Store 接受并执行副作用 Command （网络操作、文件操作等与状态变更无关的操作）来继而发送新的 Action 再次触发 Reducer 返回新的 State。&lt;/li&gt;
+&lt;li&gt;用新的 State 替换 Store 中原有的状态，并用新状态来驱动更新界面。&lt;/li&gt;
+&lt;li&gt;使用 Binding 来完成界面和状态的双向绑定。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用这种架构的优势将 View 中的状态操作完全解耦到了 Store 上去操作，所以对 State 的状态修改得以集中到了一个地方去处理。对项目的阅读和维护都有很好的帮助。避免了项目复杂之后散落各处的状态修改。&lt;/p&gt;
+&lt;h3&gt;相关解释&lt;/h3&gt;
+&lt;h4&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/截屏2020-05-25%20下午2.09.29.png" /&gt;&lt;figcaption&gt;截屏2020-05-25 下午2.09.29&lt;/figcaption&gt;&lt;/figure&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Store&lt;/strong&gt;: 主要持有了 State 属性和一个接受和处理 Action 的 Reduce 函数。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ObservableObject&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="n"&gt;Published&lt;/span&gt; &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;appState&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AppState&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppAction&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AppState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AppCommand&lt;/span&gt;&lt;span class="p"&gt;?)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;appState&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;appCommond&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppCommand&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt;
+
+        &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;something&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+        &lt;span class="p"&gt;....&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;appState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;appCommond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;_&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppAction&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="cp"&gt;#if&lt;/span&gt; &lt;span class="cp"&gt;DEBUG&lt;/span&gt;
+        &lt;span class="bp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Action: &lt;/span&gt;&lt;span class="si"&gt;\(&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="si"&gt;)&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+        &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;result&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="bp"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;appState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;appState&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;command&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="cp"&gt;#if&lt;/span&gt; &lt;span class="cp"&gt;DEBUG&lt;/span&gt;
+            &lt;span class="bp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;AppCommand:&lt;/span&gt;&lt;span class="si"&gt;\(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="si"&gt;)&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+            &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;State&lt;/strong&gt;: 存放相关状态的位置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Action&lt;/strong&gt;：一个定义相关操作的枚举&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;enum&lt;/span&gt; &lt;span class="nc"&gt;AppAction&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;something&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Command&lt;/strong&gt;：执行相关副作用操作的地方&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;protocol&lt;/span&gt; &lt;span class="nc"&gt;AppCommand&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;store&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;WriteUserAppCommand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AppCommand&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;
+
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;store&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Store&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="n"&gt;FileHelper&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;writeJSON&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;documentDirectory&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fileName&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;user.json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;三种改变 State 的途径&lt;/h2&gt;
+&lt;p&gt;更准确的应该是两种，Command 的方式最终也是通过 Action 来处理相关状态改变。&lt;/p&gt;
+&lt;h3&gt;通过 Action 来改变 State&lt;/h3&gt;
+&lt;p&gt;通过向 Store 发送并处理 Action 来改变直接过间接通过 Command 相关状态。&lt;/p&gt;
+&lt;h3&gt;通过 Binding 双向绑定改变 State&lt;/h3&gt;
+&lt;p&gt;利用 SwiftUI 的双向绑定的特性，可以直接把 State 和 View 绑定起来。当 View 的状态改变直接修改了 Store 中的原始状态。&lt;/p&gt;
+&lt;h3&gt;通过 Command 副作用来改变 State&lt;/h3&gt;
+&lt;blockquote&gt;&lt;p&gt;“Reducer 的唯一职责应该是计算新的 State，而发送请求和接收响应，显然和返回新的 State 没什么关系，它们属于设置状态这一操作的“副作用”。在我们的架构中我们使用 Command 来代表“在设置状态的同时需要触发一些其他操作”这个语境。Reducer 在返回新的 State 的同时，还返回一个代表需要进行何种副作用的 Command 值 (对应上一段中的第一个时间点)。Store 在接收到这个 Command 后，开始进行额外操作，并在操作完成后发送一个新的 Action。这个 Action 中带有异步操作所获取到的数据。它将再次触发 Reducer 并返回新的 State，继而完成异步操作结束时的 UI 更新 (对应上一段中的第二个时间点)。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;用绑定来更新的状态时通过 Publisher 来订阅并处理事件&lt;/h2&gt;
+&lt;p&gt;对于通过 Action 改变的状态，如果我们想要执行网络请求这样的副作用，可以通过同时返回合适的 Command 完成。但是对于通过绑定来更新的状态，由于不会经过 Store 的 reducer 来处理状态并返回 Command，我们缺少一种有效的手段来在它们改变时执行副作用。&lt;/p&gt;
+&lt;p&gt;在 SwiftUI 中可以使用 combine 来解决这个问题。最简单的方法是在属性前加上 @Published 来为相关属性创建 Publisher 。然后在合适的位置订阅相关事件来执行额外的操作。&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;通过这个架构体验到了 SwiftUI 开发数据驱动页面更新的便利和优势，而且 SwiftUI 还能用来开发 Mac 端的应用。虽然目前 SwiftUI 还在开始不成熟的阶段，但是有理由相信以后 SwiftUI 统一苹果全平台的时候。期待下个月的 WWDC 的 SwiftUI。&lt;/p&gt;
+</description><author>linsyorozuya@yahoo.com (H。H)</author><guid isPermaLink="true">/archives/SwiftUI - 开发图片模糊的 MAC 小应用/</guid><pubDate>Sat, 23 May 2020 00:00:00 +0806</pubDate></item></channel></rss>
