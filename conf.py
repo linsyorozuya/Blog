@@ -23,7 +23,7 @@ enable_jsdelivr = {
 }
 
 # 站点设置
-site_name = "Coder 灰桑"
+site_name = "「Coder」灰桑"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2020-01-11T12:00+08:00"
 author = "linsyorozuya"
@@ -36,7 +36,7 @@ external_links = [
     {
         "name": "灰桑",
         "url": "https://life.linsyorozuya.com",
-        "brief": "灰桑的主页。"
+        "brief": "Who"
     }
 ]
 nav = [
