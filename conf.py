@@ -23,27 +23,21 @@ enable_jsdelivr = {
 }
 
 # 站点设置
-site_name = "Lin's よろづ屋"
+site_name = "Coder 灰桑"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2020-01-11T12:00+08:00"
 author = "linsyorozuya"
 email = "linsyorozuya@yahoo.com"
 author_homepage = "https://code.linsyorozuya.com"
-description = "吾性自足，不假外求"
-key_words = ['Maverick', 'Galileo', 'blog']
+description = "图难于其易，于大为其细"
+key_words = ['灰桑', 'Coder 灰桑', 'blog']
 language = 'zh-CN'
 external_links = [
     {
         "name": "灰桑",
         "url": "https://life.linsyorozuya.com",
         "brief": "灰桑的主页。"
-    },
-    {
-        "name": "Maverick",
-        "url": "https://github.com/AlanDecode/Maverick",
-        "brief": "🏄‍ Go My Own Way."
     }
-
 ]
 nav = [
     {
