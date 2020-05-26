@@ -11,7 +11,7 @@ tags:
   - 其他
 ---
 
-![灰宝](https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/IMG_2500.jpeg)
+![灰宝](https://cdn.jsdelivr.net/gh/linsyorozuya/Pics@master/uPic/灰宝.jpeg)
 
 一个水平不高不低的 iOS 开发者，热爱用代码创造自己小程序的成就感。
 

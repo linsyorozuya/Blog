@@ -54,6 +54,11 @@ nav = [
         "name": "关于",
         "url": "${site_prefix}about/",
         "target": "_self"
+    },
+    {
+        "name": "简历",
+        "url": "${site_prefix}resume/",
+        "target": "_self"
     }
 ]
 
