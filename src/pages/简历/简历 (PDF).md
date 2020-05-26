@@ -1,3 +1,12 @@
+---
+layout: page
+title: 简历
+slug: resume
+date: 2020/05/26
+status: draft
+author: 灰桑
+---
+
 | 姓名 / 性别 |       林辉 / 男        |
 | :---------: | :--------------------: |
 |  联系方式   | linsyorozuya@yahoo.com |
