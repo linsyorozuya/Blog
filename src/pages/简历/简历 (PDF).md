@@ -18,6 +18,38 @@ author: 灰桑
 工作经历
 ----
 
+### 🏢 杭州点触科技（ 2014.02  - 2014.07 ）
+
+> 大四期间于该公司实习，负责开发维护公司 iOS 客户端。
+
+🔖 **Objective-C**
+
+* 学习和维护公司相关项目
+
+* 根据需求增减功能
+
+* 利用多 target 开发相似项目
+
+  
+
+### 🏢 福建英捷电子科技有限公司（ 2015.03  - 2018.01 ）
+
+> 主要独立负责公司 iOS 端 App 开发。项目由个人开发，了解开发上架的完整过程，对 Storyboard 应用于界面开发有熟练的经验。
+
+#### 📱开心学 - 提供学生书本、音频和视频学习
+
+##### 🔖 **Objective-C**
+
+* 框架优化以及版本日常更新迭代
+* 功能需求整理分析
+* 本地数据的存储
+* 音视频的播放
+* 对接第三方一些设备以及 SDK 等等
+* 利用 cocoapod 管理第三方库
+* 利用 fastlane 自动打包发布 testflight 测试
+
+
+
 ### 🏢 福建买买买电子科技有限公司（ 2018.03  - 2019.06 ） 
 
 > 主要负责公司 iOS 端 App 开发。在职期间因需求需要学习了一段时间的小程序和 Flutter 开发， 对小程序和 flutter 的开发有了一些了解和开发的能力。
@@ -44,7 +76,7 @@ author: 灰桑
 
 #### 📱关注事项 - 公司事项汇报工具
 
-##### 🔖 **Flutter**       ·  📌 [**AppStore**  ](https://itunes.apple.com/cn/app/关注事项/id1448446851?l=en&mt=8)
+##### 🔖 **Flutter**   ·  📌 [**AppStore**  ](https://itunes.apple.com/cn/app/关注事项/id1448446851?l=en&mt=8)
 
 *   负责部分模块的开发
 *   flutter 架构研究搭建以及 flutter 学习
@@ -52,33 +84,25 @@ author: 灰桑
 
 
 
-### 🏢 福建英捷电子科技有限公司（ 2015.03  - 2018.01 ）
+### 🏢 杭州创极速科技有限公司（ 2019.12  - 至今） 
 
-> 主要独立负责公司 iOS 端 App 开发。项目由个人开发，了解开发上架的完整过程，对 Storyboard 应用于界面开发有熟练的经验。
+> 主要负责 iOS 端 App 开发。[远程]
 
-#### 📱开心学 - 提供学生书本、音频和视频学习
+#### 📱Roseon - 一个显示虚拟币相关的应用
 
-##### 🔖 **Objective-C**
+##### 🔖 **Swift**
 
-* 框架优化以及版本日常更新迭代
-* 功能需求整理分析
-* 本地数据的存储
-* 音视频的播放
-* 对接第三方一些设备以及 SDK 等等
-* 利用 cocoapod 管理第三方库
-* 利用 fastlane 自动打包发布 testflight 测试
+* 使用到 RxSwift、Moya等 swift 库开发
 
   
 
-### 🏢 杭州点触科技（ 2014.02  - 2014.07 ）
+#### 📱追呗 - 明星代言同款好物平台
 
-> 大四期间于该公司实习，负责开发维护公司 iOS 客户端。
+##### 🔖 **Swift**
 
-🔖 **Objective-C**
+* 使用到 RxSwift、Moya等 swift 库开发
 
-* 学习和维护公司相关项目
-* 根据需求增减功能
-* 利用多 target 开发相似项目
+
 
 ## Side Projects
 
@@ -91,7 +115,7 @@ author: 灰桑
 一个简单收藏和查看虚拟币价格变动的小应用。
 ```
 
-##### 🔖 **Swift**  ·  📌 [**AppStore**](https://itunes.apple.com/cn/app/coinsalbum/id1437463750?l=en&mt=8) 
+##### 🔖 **Swift**   ·  📌 [**AppStore**](https://itunes.apple.com/cn/app/coinsalbum/id1437463750?l=en&mt=8) 
 
 
 
@@ -106,7 +130,7 @@ author: 灰桑
 
 
 
-#### 📱BlurImage - SwiftUI 开发给图片添加模糊效果的 MAC 应用
+#### 📱BlurImage - 给图片添加模糊效果的 MAC 应用
 
 ```
 练习 SwiftUI 完成小应用。
@@ -117,39 +141,14 @@ author: 灰桑
 
 
 
-## 其他项目
-
-> 业余与朋友共同开发项目，能从过程中发现和学习可以改进的地方。
-
-#### 📱Rosen - 一个显示虚拟币相关的应用
+#### 📱DailyApod - 查看每日 NASA 的天文图片的小应用
 
 ```
-使用 RxSwift 、Moya等第三方库来开发实际项目。
+练习 SwiftUI 完成小应用。
+查看每日 NASA 的天文图片，并收藏分享的小应用。
 ```
 
-##### 🔖 **Swift**
-
-* 使用到 RxSwift、Moya等 swift 库开发
-
-  
-
-#### 📱天医星 - 一个在线询问医生、开处方、取药的应用
-
-```
-医生、患者和药房三个 iOS 客户端。一个在线询问医生、开处方、取药等功能的 app。
-```
-
-##### 🔖 **Objective-C**  ·  📌 [**AppStore**](https://itunes.apple.com/cn/app/id1055257513?mt=8&at=1l3vntR&ct=qm)   
-
-
-
-#### 📱享选车 - 提供给想买车的消费者和4s电销售顾问一个视频沟通的平台
-
-```
-通过视频在线链接4s 店员和顾客的应用。
-```
-
-##### 🔖 **Objective-C**  ·  📌 [**AppStore** ](https://geo.itunes.apple.com/us/app/享好车/id1323700255?mt=8&uo=4&at=1001lxLB)
+##### 🔖 **SwiftUI**  
 
 
 
