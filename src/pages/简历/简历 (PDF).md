@@ -88,19 +88,14 @@ author: 灰桑
 
 > 主要负责 iOS 端 App 开发。[远程]
 
-#### 📱Roseon - 一个显示虚拟币相关的应用
+#### 📱 两款虚拟币相关的应用
 
-##### 🔖 **Swift**
+##### 🔖 **Swift**  ·  🔖**Objective-C** 
 
-* 使用到 RxSwift、Moya等 swift 库开发
+* 使用到 RxSwift、Moya等 swift 库开发。
 
-  
 
-#### 📱追呗 - 明星代言同款好物平台
-
-##### 🔖 **Swift**
-
-* 使用到 RxSwift、Moya等 swift 库开发
+* 维护和重构相关代码。
 
 
 
